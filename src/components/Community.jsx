@@ -9,26 +9,16 @@ const Community = () => {
             </h2>
 
             <Terminal title="MSG: OPEN_INVITATION">
-                <div style={{ padding: '0 1rem' }}>
+                <div style={{ padding: '0 1rem', textAlign: 'center' }}>
                     <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1.5rem' }}>
-                        🚀 You’re Invited to Join Our Cyber Security Community! 🔒
+                        🚀 JOIN_CYBER_COMMUNITY 🔒
                     </h3>
 
-                    <p style={{ color: '#eee', marginBottom: '1rem', lineHeight: '1.6' }}>
-                        Hey there 👋,<br />
-                        If you’re passionate about Cyber Security, this is the place for you!
-                        We’ve created a WhatsApp community where we:
+                    <p style={{ color: '#eee', marginBottom: '1.5rem', lineHeight: '1.6', maxWidth: '600px', margin: '0 auto 1.5rem auto' }}>
+                        Connect with security enthusiasts to share knowledge, discuss CVEs, and get job updates.
                     </p>
 
-                    <ul style={{ color: '#eee', lineHeight: '1.8', marginBottom: '2rem', listStyle: 'none', paddingLeft: '10px' }}>
-                        <li>💡 Share knowledge, tips & tools</li>
-                        <li>📢 Discuss the latest cyber threats & CVEs</li>
-                        <li>🛠️ Help each other with resources & guidance</li>
-                        <li>🤝 Network with fellow security enthusiasts</li>
-                        <li>💼 Jobs and Internships Updates</li>
-                    </ul>
-
-                    <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
+                    <div style={{ marginBottom: '1rem' }}>
                         <a
                             href="https://forms.gle/xsLyYgHzMiYsp8zx6"
                             target="_blank"
@@ -45,13 +35,9 @@ const Community = () => {
                                 e.target.style.boxShadow = 'none';
                             }}
                         >
-                            👉 JOIN_PROTOCOL_INITiATED
+                            👉 JOIN_PROTOCOL_INITIATED
                         </a>
                     </div>
-
-                    <p style={{ color: '#aaa', fontSize: '0.9rem', textAlign: 'center', marginTop: '1.5rem' }}>
-                        Let’s learn, connect, and grow together in the world of cybersecurity.
-                    </p>
                 </div>
             </Terminal>
         </section>
