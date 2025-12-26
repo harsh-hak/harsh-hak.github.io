@@ -4,8 +4,6 @@ import profileImg from '../assets/profile.jpg';
 import FadeInSection from './FadeInSection';
 
 const Hero = () => {
-    // Simplified Hero Content
-
     return (
         <section id="hero" style={{
             height: '100vh',
@@ -25,72 +23,70 @@ const Hero = () => {
                     overflow: 'hidden',
                     border: '3px solid var(--primary)',
                     boxShadow: '0 0 20px var(--primary-dim)',
-                    margin: '0 auto 2rem auto' // Centering fix if needed
+                    margin: '0 auto 2rem auto'
                 }}>
                     <img src={profileImg} alt="Profile" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
 
                 <div style={{
-                    textAlign: 'left',
-                    background: 'rgba(5, 5, 5, 0.95)',
+                    textAlign: 'center',
+                    background: 'transparent',
                     color: '#fff',
                     padding: '2rem',
-                    border: '1px solid var(--primary)',
-                    boxShadow: '0 0 30px rgba(0, 255, 65, 0.2)',
                     maxWidth: '800px',
                     width: '90%',
                     margin: '0 auto'
                 }}>
-                    <pre style={{
-                        whiteSpace: 'pre-wrap',
-                        fontFamily: 'var(--font-mono)',
-                        lineHeight: '1.5',
-                        fontSize: '1.2rem',
-                        margin: 0
+                    <h1 style={{
+                        fontSize: '3rem',
+                        marginBottom: '1rem',
+                        textShadow: '0 0 20px rgba(0, 255, 65, 0.3)'
                     }}>
-                        {text}
-                        <span className="cursor-blink">_</span>
-                    </pre>
+                        HI, I'M {resumeData.name.toUpperCase()}
+                    </h1>
+                    <p style={{
+                        fontSize: '1.2rem',
+                        color: '#ccc',
+                        marginBottom: '0.5rem'
+                    }}>
+                        {resumeData.role}
+                    </p>
+                    <p style={{
+                        fontSize: '1rem',
+                        color: 'var(--primary)',
+                        fontFamily: 'var(--font-mono)'
+                    }}>
+                        {resumeData.contact.location || "Deakin University, India"}
+                    </p>
                 </div>
             </FadeInSection>
 
-            <style>{`
-        .cursor-blink {
-          animation: blink 1s step-end infinite;
-        }
-        @keyframes blink {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0; }
-        }
-      `}</style>
-
             <FadeInSection delay="800ms">
-                <div style={{ marginTop: '3rem', display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center' }}>
-                    <a href="#about" style={{
+                <div style={{ marginTop: '2rem', display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center' }}>
+                    <a href="#projects" style={{
                         display: 'inline-block',
-                        padding: '10px 30px',
+                        padding: '12px 30px',
+                        borderRadius: '30px',
                         border: '1px solid var(--primary)',
-                        color: 'var(--primary)',
-                        background: 'transparent',
-                        letterSpacing: '2px',
-                        textTransform: 'uppercase',
+                        color: 'black',
+                        background: 'var(--primary)',
+                        letterSpacing: '1px',
                         fontWeight: 'bold',
                         cursor: 'pointer',
                         transition: '0.3s',
-                        textDecoration: 'none'
+                        textDecoration: 'none',
+                        boxShadow: '0 0 15px rgba(0, 255, 65, 0.4)'
                     }}
                         onMouseEnter={(e) => {
-                            e.target.style.background = 'var(--primary)';
-                            e.target.style.color = 'black';
-                            e.target.style.boxShadow = '0 0 20px var(--primary)';
+                            e.target.style.transform = 'scale(1.05)';
+                            e.target.style.boxShadow = '0 0 25px var(--primary)';
                         }}
                         onMouseLeave={(e) => {
-                            e.target.style.background = 'transparent';
-                            e.target.style.color = 'var(--primary)';
-                            e.target.style.boxShadow = 'none';
+                            e.target.style.transform = 'scale(1)';
+                            e.target.style.boxShadow = '0 0 15px rgba(0, 255, 65, 0.4)';
                         }}
                     >
-                        INITIALIZE
+                        VIEW WORK
                     </a>
 
                     <a href={resumeData.contact.cv} target="_blank" rel="noreferrer" style={{
