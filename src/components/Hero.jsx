@@ -4,6 +4,19 @@ import profileImg from '../assets/profile.jpg';
 import FadeInSection from './FadeInSection';
 
 const Hero = () => {
+    const [text, setText] = useState('');
+    const fullText = resumeData.role;
+
+    useEffect(() => {
+        let index = 0;
+        const interval = setInterval(() => {
+            setText(fullText.slice(0, index));
+            index++;
+            if (index > fullText.length) clearInterval(interval);
+        }, 50);
+        return () => clearInterval(interval);
+    }, [fullText]);
+
     return (
         <section id="hero" style={{
             minHeight: '100vh',
@@ -49,19 +62,32 @@ const Hero = () => {
                     <p style={{
                         fontSize: 'clamp(1rem, 3vw, 1.2rem)',
                         color: '#ccc',
-                        marginBottom: '0.5rem'
+                        marginBottom: '0.5rem',
+                        minHeight: '1.5em'
                     }}>
-                        {resumeData.role}
+                        {text}<span className="cursor-blink">|</span>
                     </p>
                     <p style={{
+                        marginTop: '1rem',
                         fontSize: '0.9rem',
-                        color: 'var(--primary)',
+                        color: '#aaa',
                         fontFamily: 'var(--font-mono)'
                     }}>
-                        {resumeData.contact.location || "Deakin University, India"}
+                        <span style={{
+                            color: 'var(--primary)',
+                            fontWeight: 'bold',
+                            textShadow: '0 0 10px rgba(0, 255, 65, 0.3)'
+                        }}>
+                            Deakin University, India
+                        </span>
                     </p>
                 </div>
             </FadeInSection>
+
+            <style>{`
+                .cursor-blink { animation: blink 1s step-end infinite; }
+                @keyframes blink { 50% { opacity: 0; } }
+            `}</style>
 
             <FadeInSection delay="800ms">
                 <div style={{ marginTop: '2rem', display: 'flex', gap: '15px', flexWrap: 'wrap', justifyContent: 'center' }}>
