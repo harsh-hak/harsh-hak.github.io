@@ -1,60 +1,72 @@
 import React from 'react';
 import Terminal from './Terminal';
+import FadeInSection from './FadeInSection';
 
 const Community = () => {
     return (
         <section id="community" className="container" style={{ padding: '4rem 0' }}>
-            <h2 className="section-title">
-                <span style={{ color: 'var(--primary)' }}>&gt;</span> COMMUNITY_UPLINK
-            </h2>
+            <FadeInSection>
+                <h2 className="section-title">
+                    <span style={{ color: 'var(--primary)' }}>//</span> COMMUNITY
+                </h2>
 
-            <Terminal title="MSG: OPEN_INVITATION">
-                <div style={{ padding: '0 1rem', textAlign: 'center' }}>
-                    <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '1.5rem' }}>
-                        🚀 JOIN_CYBER_COMMUNITY 🔒
-                    </h3>
+                <div className="interactive-card" style={{ maxWidth: '800px', margin: '0 auto' }}>
+                    <Terminal title="community_invite.exe">
+                        <div style={{ padding: '2rem', textAlign: 'center', background: 'linear-gradient(rgba(0,0,0,0), rgba(0, 255, 65, 0.05))' }}>
+                            <h3 style={{
+                                fontSize: '2rem',
+                                marginBottom: '1.5rem',
+                                background: 'linear-gradient(to right, #fff, var(--primary))',
+                                WebkitBackgroundClip: 'text',
+                                WebkitTextFillColor: 'transparent',
+                                fontWeight: 'bold'
+                            }}>
+                                JOIN_CYBER_COMMUNITY
+                            </h3>
 
-                    <p style={{ color: '#eee', marginBottom: '1.5rem', lineHeight: '1.6', maxWidth: '600px', margin: '0 auto 1.5rem auto' }}>
-                        Connect with security enthusiasts to share knowledge, discuss CVEs, and get job updates.
-                    </p>
+                            <p style={{ color: '#ccc', marginBottom: '2rem', lineHeight: '1.8', fontSize: '1.1rem' }}>
+                                Connect with security enthusiasts to share knowledge, discuss CVEs, and get job updates.
+                            </p>
 
-                    <div style={{ marginBottom: '1rem' }}>
-                        <a
-                            href="https://forms.gle/xsLyYgHzMiYsp8zx6"
-                            target="_blank"
-                            rel="noreferrer"
-                            style={buttonStyle}
-                            onMouseEnter={e => {
-                                e.target.style.background = 'var(--primary)';
-                                e.target.style.color = '#000';
-                                e.target.style.boxShadow = '0 0 20px var(--primary)';
-                            }}
-                            onMouseLeave={e => {
-                                e.target.style.background = 'rgba(5, 5, 5, 0.9)';
-                                e.target.style.color = '#fff';
-                                e.target.style.boxShadow = 'none';
-                            }}
-                        >
-                            👉 JOIN_PROTOCOL_INITIATED
-                        </a>
-                    </div>
+                            <div style={{ marginBottom: '1rem' }}>
+                                <a
+                                    href="https://forms.gle/xsLyYgHzMiYsp8zx6"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    style={buttonStyle}
+                                    onMouseEnter={e => {
+                                        e.target.style.transform = 'scale(1.05)';
+                                        e.target.style.boxShadow = '0 0 30px var(--primary-dim)';
+                                    }}
+                                    onMouseLeave={e => {
+                                        e.target.style.transform = 'scale(1)';
+                                        e.target.style.boxShadow = '0 0 15px rgba(0, 255, 65, 0.2)';
+                                    }}
+                                >
+                                    CLICK_HERE_TO_JOIN
+                                </a>
+                            </div>
+                        </div>
+                    </Terminal>
                 </div>
-            </Terminal>
+            </FadeInSection>
         </section>
     );
 };
 
 const buttonStyle = {
     display: 'inline-block',
-    padding: '12px 25px',
-    border: '1px solid var(--primary)',
-    background: 'rgba(5, 5, 5, 0.9)',
-    color: '#fff',
+    padding: '15px 40px',
+    background: 'var(--primary)',
+    color: '#000',
     textDecoration: 'none',
-    fontWeight: 'bold',
+    fontWeight: '900',
     letterSpacing: '1px',
     transition: '0.3s',
-    borderRadius: '2px'
+    borderRadius: '30px',
+    boxShadow: '0 0 15px rgba(0, 255, 65, 0.2)',
+    fontSize: '1rem',
+    textTransform: 'uppercase'
 };
 
 export default Community;

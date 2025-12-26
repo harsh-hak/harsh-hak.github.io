@@ -35,7 +35,7 @@ const GithubStats = () => {
             {/* TryHackMe Badge */}
             <h3 style={{ color: 'var(--accent)', marginBottom: '1rem', alignSelf: 'flex-start' }}>// TRYHACKME_RANK</h3>
             <div style={{
-                padding: '2rem',
+                padding: '1rem',
                 background: 'rgba(5, 5, 5, 0.95)',
                 border: '1px solid var(--accent)',
                 borderRadius: '4px',
@@ -46,16 +46,11 @@ const GithubStats = () => {
                 alignItems: 'center',
                 overflow: 'hidden'
             }}>
-                <iframe
-                    src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=1226997"
-                    style={{
-                        border: 'none',
-                        width: '500px',
-                        height: '280px',
-                        overflow: 'hidden'
-                    }}
-                    title="TryHackMe Badge"
-                ></iframe>
+                <img
+                    src="https://tryhackme-badges.s3.amazonaws.com/iamharshkanojiya.png"
+                    alt="TryHackMe Badge"
+                    style={{ width: '100%', maxWidth: '600px', height: 'auto' }}
+                />
             </div>
         </section>
     );
