@@ -6,18 +6,19 @@ import FadeInSection from './FadeInSection';
 const Hero = () => {
     return (
         <section id="hero" style={{
-            height: '100vh',
+            minHeight: '100vh',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
             position: 'relative',
-            paddingTop: '60px'
+            paddingTop: '60px',
+            paddingBottom: '2rem'
         }}>
             <FadeInSection delay="200ms">
                 <div style={{
-                    width: '220px',
-                    height: '220px',
+                    width: 'min(220px, 50vw)',
+                    height: 'min(220px, 50vw)',
                     marginBottom: '2rem',
                     borderRadius: '50%',
                     overflow: 'hidden',
@@ -32,27 +33,28 @@ const Hero = () => {
                     textAlign: 'center',
                     background: 'transparent',
                     color: '#fff',
-                    padding: '2rem',
+                    padding: '1rem',
                     maxWidth: '800px',
                     width: '90%',
                     margin: '0 auto'
                 }}>
                     <h1 style={{
-                        fontSize: '3rem',
+                        fontSize: 'clamp(2rem, 5vw, 3rem)',
                         marginBottom: '1rem',
-                        textShadow: '0 0 20px rgba(0, 255, 65, 0.3)'
+                        textShadow: '0 0 20px rgba(0, 255, 65, 0.3)',
+                        lineHeight: 1.2
                     }}>
                         HI, I'M {resumeData.name.toUpperCase()}
                     </h1>
                     <p style={{
-                        fontSize: '1.2rem',
+                        fontSize: 'clamp(1rem, 3vw, 1.2rem)',
                         color: '#ccc',
                         marginBottom: '0.5rem'
                     }}>
                         {resumeData.role}
                     </p>
                     <p style={{
-                        fontSize: '1rem',
+                        fontSize: '0.9rem',
                         color: 'var(--primary)',
                         fontFamily: 'var(--font-mono)'
                     }}>
@@ -62,10 +64,10 @@ const Hero = () => {
             </FadeInSection>
 
             <FadeInSection delay="800ms">
-                <div style={{ marginTop: '2rem', display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center' }}>
+                <div style={{ marginTop: '2rem', display: 'flex', gap: '15px', flexWrap: 'wrap', justifyContent: 'center' }}>
                     <a href="#projects" style={{
                         display: 'inline-block',
-                        padding: '12px 30px',
+                        padding: '12px 25px',
                         borderRadius: '30px',
                         border: '1px solid var(--primary)',
                         color: 'black',
@@ -75,7 +77,8 @@ const Hero = () => {
                         cursor: 'pointer',
                         transition: '0.3s',
                         textDecoration: 'none',
-                        boxShadow: '0 0 15px rgba(0, 255, 65, 0.4)'
+                        boxShadow: '0 0 15px rgba(0, 255, 65, 0.4)',
+                        fontSize: '0.9rem'
                     }}
                         onMouseEnter={(e) => {
                             e.target.style.transform = 'scale(1.05)';
@@ -91,7 +94,7 @@ const Hero = () => {
 
                     <a href={resumeData.contact.cv} target="_blank" rel="noreferrer" style={{
                         display: 'inline-block',
-                        padding: '12px 30px',
+                        padding: '12px 25px',
                         borderRadius: '30px',
                         border: '1px solid var(--text)',
                         color: 'var(--text)',
@@ -100,7 +103,8 @@ const Hero = () => {
                         fontWeight: 'bold',
                         cursor: 'pointer',
                         transition: '0.3s',
-                        textDecoration: 'none'
+                        textDecoration: 'none',
+                        fontSize: '0.9rem'
                     }}
                         onMouseEnter={(e) => {
                             e.target.style.background = 'rgba(255,255,255,0.1)';

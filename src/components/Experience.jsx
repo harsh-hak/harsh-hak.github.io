@@ -16,7 +16,7 @@ const Experience = () => {
                     <div className="timeline-connector" />
 
                     {resumeData.experience.map((exp, idx) => (
-                        <div key={idx} style={{ position: 'relative', paddingLeft: '60px', marginBottom: '3rem' }}>
+                        <div key={idx} className="timeline-item">
                             {/* Dot */}
                             <div style={{
                                 position: 'absolute',

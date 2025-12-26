@@ -80,16 +80,22 @@ const Navbar = () => {
                         top: 60px;
                         left: 0;
                         width: 100%;
+                        height: calc(100vh - 60px);
                         flex-direction: column;
                         background: rgba(8, 8, 8, 0.98);
                         border-bottom: 1px solid var(--primary-dim);
-                        padding: 1rem 0;
-                        gap: 1.5rem !important;
+                        padding: 2rem 0;
+                        gap: 2rem !important;
                         align-items: center;
+                        justify-content: center;
                         display: none !important;
+                        backdrop-filter: blur(10px);
                     }
                     .nav-links.open {
                         display: flex !important;
+                    }
+                    .nav-link {
+                        font-size: 1.2rem !important;
                     }
                 }
             `}</style>
