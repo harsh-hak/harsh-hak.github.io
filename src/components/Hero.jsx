@@ -52,10 +52,11 @@ const Hero = () => {
                     margin: '0 auto'
                 }}>
                     <h1 style={{
-                        fontSize: 'clamp(2rem, 5vw, 3rem)',
+                        fontSize: 'clamp(2rem, 5vw, 3.5rem)',
                         marginBottom: '1rem',
                         textShadow: '0 0 20px rgba(0, 255, 65, 0.3)',
-                        lineHeight: 1.2
+                        lineHeight: 1.2,
+                        whiteSpace: 'nowrap'
                     }}>
                         HI, I'M {resumeData.name.toUpperCase()}
                     </h1>
@@ -68,15 +69,16 @@ const Hero = () => {
                         {text}<span className="cursor-blink">|</span>
                     </p>
                     <p style={{
-                        marginTop: '1rem',
-                        fontSize: '0.9rem',
-                        color: '#aaa',
+                        marginTop: '1.5rem',
+                        fontSize: '1.5rem',
+                        color: '#fff',
                         fontFamily: 'var(--font-mono)'
                     }}>
                         <span style={{
                             color: 'var(--primary)',
                             fontWeight: 'bold',
-                            textShadow: '0 0 10px rgba(0, 255, 65, 0.3)'
+                            textShadow: '0 0 15px rgba(0, 255, 65, 0.5)',
+                            letterSpacing: '1px'
                         }}>
                             Deakin University, India
                         </span>
