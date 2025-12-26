@@ -51,7 +51,7 @@ const Hero = () => {
                     width: '90%',
                     margin: '0 auto'
                 }}>
-                    <h1 style={{
+                    <h1 className="hero-title" style={{
                         fontSize: 'clamp(2rem, 5vw, 3.5rem)',
                         marginBottom: '1rem',
                         textShadow: '0 0 20px rgba(0, 255, 65, 0.3)',
@@ -89,6 +89,13 @@ const Hero = () => {
             <style>{`
                 .cursor-blink { animation: blink 1s step-end infinite; }
                 @keyframes blink { 50% { opacity: 0; } }
+
+                @media (max-width: 768px) {
+                    .hero-title {
+                        white-space: normal !important;
+                        font-size: 2.2rem !important;
+                    }
+                }
             `}</style>
 
             <FadeInSection delay="800ms">
