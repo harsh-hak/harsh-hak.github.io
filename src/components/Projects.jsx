@@ -24,7 +24,7 @@ const Projects = () => {
         <section id="projects" className="container" style={{ padding: '4rem 0' }}>
             <FadeInSection>
                 <h2 className="section-title">
-                    <span style={{ color: 'var(--primary)' }}>&gt;</span> PROJECT_DIRECTORY
+                    <span style={{ color: 'var(--primary)' }}>//</span> PROJECTS
                 </h2>
 
                 <div style={{ marginBottom: '2rem', display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
@@ -42,19 +42,20 @@ const Projects = () => {
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
                     {filteredProjects.map((proj, idx) => (
                         <div key={idx} className="interactive-card">
-                            <Terminal title={`EXEC: ${proj.title}`}>
+                            <Terminal title={proj.title}>
                                 <div style={{ marginBottom: '1rem', color: 'var(--primary-dim)', fontSize: '0.9rem' }}>
-                                    [{proj.tech}]
+                                    {proj.tech}
                                 </div>
                                 <p style={{ lineHeight: '1.6', color: '#eee' }}>
                                     {proj.description}
                                 </p>
                                 <div style={{ marginTop: '1.5rem', textAlign: 'right' }}>
                                     <a href="#" style={{
-                                        fontSize: '0.8rem',
+                                        fontSize: '0.9rem',
                                         borderBottom: '1px solid var(--primary)',
-                                        paddingBottom: '2px'
-                                    }}>VIEW_SOURCE &gt;</a>
+                                        paddingBottom: '2px',
+                                        textDecoration: 'none'
+                                    }}>View Code &rarr;</a>
                                 </div>
                             </Terminal>
                         </div>

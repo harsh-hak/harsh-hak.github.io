@@ -4,18 +4,7 @@ import profileImg from '../assets/profile.jpg';
 import FadeInSection from './FadeInSection';
 
 const Hero = () => {
-    const [text, setText] = useState('');
-    const fullText = `> PORTFOLIO LOADING...\n> CONNECTING TO SERVER...\n> AUTHENTICATED AS: ${resumeData.name}\n> ROLE: ${resumeData.role}\n> LOCATION: ${resumeData.contact.location || "Deakin University, India"}\n> STATUS: READY_TO_WORK...`;
-
-    useEffect(() => {
-        let index = 0;
-        const interval = setInterval(() => {
-            setText(fullText.slice(0, index));
-            index++;
-            if (index > fullText.length) clearInterval(interval);
-        }, 40);
-        return () => clearInterval(interval);
-    }, []);
+    // Simplified Hero Content
 
     return (
         <section id="hero" style={{
@@ -106,29 +95,27 @@ const Hero = () => {
 
                     <a href={resumeData.contact.cv} target="_blank" rel="noreferrer" style={{
                         display: 'inline-block',
-                        padding: '10px 30px',
-                        border: '1px solid var(--secondary)',
-                        color: 'var(--secondary)',
+                        padding: '12px 30px',
+                        borderRadius: '30px',
+                        border: '1px solid var(--text)',
+                        color: 'var(--text)',
                         background: 'transparent',
-                        letterSpacing: '2px',
-                        textTransform: 'uppercase',
+                        letterSpacing: '1px',
                         fontWeight: 'bold',
                         cursor: 'pointer',
                         transition: '0.3s',
                         textDecoration: 'none'
                     }}
                         onMouseEnter={(e) => {
-                            e.target.style.background = 'var(--secondary)';
-                            e.target.style.color = 'black';
-                            e.target.style.boxShadow = '0 0 20px var(--secondary)';
+                            e.target.style.background = 'rgba(255,255,255,0.1)';
+                            e.target.style.borderColor = 'white';
                         }}
                         onMouseLeave={(e) => {
                             e.target.style.background = 'transparent';
-                            e.target.style.color = 'var(--secondary)';
-                            e.target.style.boxShadow = 'none';
+                            e.target.style.borderColor = 'var(--text)';
                         }}
                     >
-                        ACCESS_RESUME
+                        RESUME
                     </a>
                 </div>
             </FadeInSection>

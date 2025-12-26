@@ -8,17 +8,17 @@ const About = () => {
         <section id="about" className="container" style={{ padding: '4rem 0' }}>
             <FadeInSection>
                 <h2 className="section-title">
-                    <span style={{ color: 'var(--primary)' }}>&gt;</span> ABOUT_ME
+                    <span style={{ color: 'var(--primary)' }}>//</span> ABOUT ME
                 </h2>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
-                    <Terminal title="C:\USER\SUMMARY.TXT">
+                    <Terminal title="Professional Summary">
                         <p style={{ lineHeight: '1.6', color: '#eee' }}>
                             {resumeData.summary}
                         </p>
                     </Terminal>
 
-                    <Terminal title="C:\USER\EDUCATION.DB">
+                    <Terminal title="Education">
                         {resumeData.education.map((edu, idx) => (
                             <div key={idx} style={{ marginBottom: '1.5rem', borderLeft: '2px solid var(--secondary)', paddingLeft: '1rem' }}>
                                 <div style={{ color: 'var(--secondary)', fontWeight: 'bold' }}>{edu.degree}</div>

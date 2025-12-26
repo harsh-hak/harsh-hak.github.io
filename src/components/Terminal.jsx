@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Terminal = ({ title = "C:\\SYSTEM\\ROOT", children, className = "" }) => {
+const Terminal = ({ title = "Info", children, className = "" }) => {
     return (
         <div className={`terminal-window ${className}`} style={{
             border: '1px solid var(--primary-dim)',
@@ -16,7 +16,7 @@ const Terminal = ({ title = "C:\\SYSTEM\\ROOT", children, className = "" }) => {
                 background: 'var(--primary-dim)',
                 color: 'black',
                 padding: '8px 15px',
-                fontFamily: 'monospace',
+                fontFamily: 'var(--font-main)',
                 fontWeight: 'bold',
                 display: 'flex',
                 justifyContent: 'space-between',
@@ -24,11 +24,6 @@ const Terminal = ({ title = "C:\\SYSTEM\\ROOT", children, className = "" }) => {
                 userSelect: 'none'
             }}>
                 <span style={{ fontSize: '0.9rem' }}>{title}</span>
-                <div style={{ display: 'flex', gap: '8px' }}>
-                    <div style={{ width: '12px', height: '12px', background: '#333', borderRadius: '50%' }}></div>
-                    <div style={{ width: '12px', height: '12px', background: '#333', borderRadius: '50%' }}></div>
-                    <div style={{ width: '12px', height: '12px', background: '#ff3b3b', borderRadius: '50%' }}></div>
-                </div>
             </div>
             <div className="terminal-body" style={{ padding: '20px' }}>
                 {children}

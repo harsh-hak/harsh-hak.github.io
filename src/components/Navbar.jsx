@@ -4,7 +4,7 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const navItems = [
-        { label: 'TERMINAL', href: '#hero' },
+        { label: 'HOME', href: '#hero' },
         { label: 'ABOUT', href: '#about' },
         { label: 'SKILLS', href: '#skills' },
         { label: 'EXPERIENCE', href: '#experience' },
@@ -64,7 +64,7 @@ const Navbar = () => {
                                 position: 'relative'
                             }}
                         >
-                            [{item.label}]
+                            {item.label}
                         </a>
                     ))}
                 </div>

@@ -11,7 +11,7 @@ const Contact = () => {
                 </h2>
 
                 <p style={{ color: '#888', marginBottom: '2rem', maxWidth: '600px', margin: '0 auto 2rem auto' }}>
-                    Status: ONLINE. Available for secure communications.
+                    Always open to discussing new opportunities and collaborations.
                 </p>
 
                 <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap' }}>
