@@ -7,7 +7,7 @@ const Contact = () => {
         <section id="contact" className="container" style={{ padding: '4rem 0', textAlign: 'center', marginBottom: '4rem' }}>
             <FadeInSection>
                 <h2 className="section-title">
-                    <span style={{ color: 'var(--primary)' }}>&gt;</span> ESTABLISH_UPLINK
+                    <span style={{ color: 'var(--primary)' }}>&gt;</span> CONNECT WITH ME
                 </h2>
 
                 <p style={{ color: '#888', marginBottom: '2rem', maxWidth: '600px', margin: '0 auto 2rem auto' }}>
