@@ -46,7 +46,8 @@ export const resumeData = {
     {
       title: "Malware Analyzer X",
       tech: "Python, CLI",
-      description: "A Python-based static malware analysis and network packet detection tool for Linux ELF binaries. Automates string extraction, entropy scoring, YARA signature matching, and VirusTotal lookup."
+      description: "A Python-based static malware analysis and network packet detection tool for Linux ELF binaries. Automates string extraction, entropy scoring, YARA signature matching, and VirusTotal lookup.",
+      link: "https://harsh-hak.github.io/Malware-Analyzer-X/"
     },
     {
       title: "DHCP Starvation Attack Simulation",

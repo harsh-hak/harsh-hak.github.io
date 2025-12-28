@@ -22,7 +22,7 @@ const Projects = () => {
                                     {proj.description}
                                 </p>
                                 <div style={{ marginTop: '1.5rem', textAlign: 'right' }}>
-                                    <a href="#" style={{
+                                    <a href={proj.link || "#"} target="_blank" rel="noopener noreferrer" style={{
                                         fontSize: '0.9rem',
                                         borderBottom: '1px solid var(--primary)',
                                         paddingBottom: '2px',
