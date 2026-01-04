@@ -159,7 +159,7 @@ const Hero = () => {
                     <p style={{
                         color: 'var(--text)',
                         marginBottom: '1rem',
-                        fontSize: '1rem',
+                        fontSize: '1.5rem',
                         letterSpacing: '1px',
                         opacity: 0.8
                     }}>
@@ -167,19 +167,19 @@ const Hero = () => {
                     </p>
                     <div style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
                         <a href={`https://linkedin.com/in/${resumeData.contact.linkedin}`} target="_blank" rel="noopener noreferrer"
-                            style={{ color: 'var(--text)', fontSize: '1.5rem', transition: '0.3s' }}
+                            style={{ color: 'var(--text)', fontSize: '2.5rem', transition: '0.3s' }}
                             onMouseEnter={(e) => e.target.style.color = 'var(--primary)'}
                             onMouseLeave={(e) => e.target.style.color = 'var(--text)'}>
                             <FaLinkedin />
                         </a>
                         <a href={`https://github.com/${resumeData.contact.github}`} target="_blank" rel="noopener noreferrer"
-                            style={{ color: 'var(--text)', fontSize: '1.5rem', transition: '0.3s' }}
+                            style={{ color: 'var(--text)', fontSize: '2.5rem', transition: '0.3s' }}
                             onMouseEnter={(e) => e.target.style.color = 'var(--primary)'}
                             onMouseLeave={(e) => e.target.style.color = 'var(--text)'}>
                             <FaGithub />
                         </a>
                         <a href={`mailto:${resumeData.contact.email}`}
-                            style={{ color: 'var(--text)', fontSize: '1.5rem', transition: '0.3s' }}
+                            style={{ color: 'var(--text)', fontSize: '2.5rem', transition: '0.3s' }}
                             onMouseEnter={(e) => e.target.style.color = 'var(--primary)'}
                             onMouseLeave={(e) => e.target.style.color = 'var(--text)'}>
                             <FaEnvelope />
