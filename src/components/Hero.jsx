@@ -91,11 +91,16 @@ const Hero = () => {
                 .cursor-blink { animation: blink 1s step-end infinite; }
                 @keyframes blink { 50% { opacity: 0; } }
 
+                .connect-text { font-size: 1.5rem; }
+                .connect-icon { font-size: 2.5rem; }
+
                 @media (max-width: 768px) {
                     .hero-title {
                         white-space: normal !important;
                         font-size: 2.2rem !important;
                     }
+                    .connect-text { font-size: 1.2rem; }
+                    .connect-icon { font-size: 2rem; }
                 }
             `}</style>
 
@@ -156,10 +161,9 @@ const Hero = () => {
                 </div>
 
                 <div style={{ marginTop: '3rem', textAlign: 'center' }}>
-                    <p style={{
+                    <p className="connect-text" style={{
                         color: 'var(--text)',
                         marginBottom: '1rem',
-                        fontSize: '1.5rem',
                         letterSpacing: '1px',
                         opacity: 0.8
                     }}>
@@ -167,19 +171,22 @@ const Hero = () => {
                     </p>
                     <div style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
                         <a href={`https://linkedin.com/in/${resumeData.contact.linkedin}`} target="_blank" rel="noopener noreferrer"
-                            style={{ color: 'var(--text)', fontSize: '2.5rem', transition: '0.3s' }}
+                            className="connect-icon"
+                            style={{ color: 'var(--text)', transition: '0.3s' }}
                             onMouseEnter={(e) => e.target.style.color = 'var(--primary)'}
                             onMouseLeave={(e) => e.target.style.color = 'var(--text)'}>
                             <FaLinkedin />
                         </a>
                         <a href={`https://github.com/${resumeData.contact.github}`} target="_blank" rel="noopener noreferrer"
-                            style={{ color: 'var(--text)', fontSize: '2.5rem', transition: '0.3s' }}
+                            className="connect-icon"
+                            style={{ color: 'var(--text)', transition: '0.3s' }}
                             onMouseEnter={(e) => e.target.style.color = 'var(--primary)'}
                             onMouseLeave={(e) => e.target.style.color = 'var(--text)'}>
                             <FaGithub />
                         </a>
                         <a href={`mailto:${resumeData.contact.email}`}
-                            style={{ color: 'var(--text)', fontSize: '2.5rem', transition: '0.3s' }}
+                            className="connect-icon"
+                            style={{ color: 'var(--text)', transition: '0.3s' }}
                             onMouseEnter={(e) => e.target.style.color = 'var(--primary)'}
                             onMouseLeave={(e) => e.target.style.color = 'var(--text)'}>
                             <FaEnvelope />
