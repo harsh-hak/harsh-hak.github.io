@@ -21,7 +21,16 @@ const Projects = () => {
                                 <p style={{ lineHeight: '1.6', color: '#eee' }}>
                                     {proj.description}
                                 </p>
-                                <div style={{ marginTop: '1.5rem', textAlign: 'right' }}>
+                                <div style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'flex-end', gap: '1rem' }}>
+                                    {proj.demoLink && (
+                                        <a href={proj.demoLink} target="_blank" rel="noopener noreferrer" style={{
+                                            fontSize: '0.9rem',
+                                            borderBottom: '1px solid var(--primary)',
+                                            paddingBottom: '2px',
+                                            textDecoration: 'none',
+                                            marginRight: 'auto'
+                                        }}>Live Demo &rarr;</a>
+                                    )}
                                     <a href={proj.link || "#"} target="_blank" rel="noopener noreferrer" style={{
                                         fontSize: '0.9rem',
                                         borderBottom: '1px solid var(--primary)',
