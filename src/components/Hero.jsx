@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 import { resumeData } from '../data';
 import profileImg from '../assets/profile.jpg';
 import FadeInSection from './FadeInSection';
@@ -152,6 +153,38 @@ const Hero = () => {
                     >
                         RESUME
                     </a>
+                </div>
+
+                <div style={{ marginTop: '3rem', textAlign: 'center' }}>
+                    <p style={{
+                        color: 'var(--text)',
+                        marginBottom: '1rem',
+                        fontSize: '1rem',
+                        letterSpacing: '1px',
+                        opacity: 0.8
+                    }}>
+                        Connect With Me
+                    </p>
+                    <div style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
+                        <a href={`https://linkedin.com/in/${resumeData.contact.linkedin}`} target="_blank" rel="noopener noreferrer"
+                            style={{ color: 'var(--text)', fontSize: '1.5rem', transition: '0.3s' }}
+                            onMouseEnter={(e) => e.target.style.color = 'var(--primary)'}
+                            onMouseLeave={(e) => e.target.style.color = 'var(--text)'}>
+                            <FaLinkedin />
+                        </a>
+                        <a href={`https://github.com/${resumeData.contact.github}`} target="_blank" rel="noopener noreferrer"
+                            style={{ color: 'var(--text)', fontSize: '1.5rem', transition: '0.3s' }}
+                            onMouseEnter={(e) => e.target.style.color = 'var(--primary)'}
+                            onMouseLeave={(e) => e.target.style.color = 'var(--text)'}>
+                            <FaGithub />
+                        </a>
+                        <a href={`mailto:${resumeData.contact.email}`}
+                            style={{ color: 'var(--text)', fontSize: '1.5rem', transition: '0.3s' }}
+                            onMouseEnter={(e) => e.target.style.color = 'var(--primary)'}
+                            onMouseLeave={(e) => e.target.style.color = 'var(--text)'}>
+                            <FaEnvelope />
+                        </a>
+                    </div>
                 </div>
             </FadeInSection>
         </section>
