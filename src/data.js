@@ -6,7 +6,8 @@ export const resumeData = {
     github: "harsh-hak",
     email: "harsh.cyber@outlook.com",
     phone: "+91 8700158124",
-    cv: "https://drive.google.com/file/d/1vyC48MxMKRoLIx114IVcT3LlIOHMot_i/view?usp=sharing"
+    cv: "https://drive.google.com/file/d/1vyC48MxMKRoLIx114IVcT3LlIOHMot_i/view?usp=sharing",
+    topmate: "harsh_cyber"
   },
   summary: "Cybersecurity professional with postgraduate specialization in malware analysis, vulnerability management, and digital forensics. Skilled in threat detection, incident response, and SOC operations using SIEM tools, threat intelligence, and the MITRE ATT&CK framework. Hands-on experience with Nmap, Nessus, Burp Suite, Wireshark, endpoint security, IDS/IPS, and Linux-based security workflows. Currently working on LLM Security and developing malware analysis tools.",
   experience: [

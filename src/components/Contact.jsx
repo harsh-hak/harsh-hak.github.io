@@ -24,6 +24,9 @@ const Contact = () => {
                     <a href={`https://github.com/${resumeData.contact.github}`} target="_blank" rel="noreferrer" className="contact-link" style={linkStyle}>
                         GITHUB
                     </a>
+                    <a href={`https://topmate.io/${resumeData.contact.topmate}`} target="_blank" rel="noreferrer" className="contact-link" style={linkStyle}>
+                        BOOK A 1:1 CALL
+                    </a>
                 </div>
             </FadeInSection>
         </section>

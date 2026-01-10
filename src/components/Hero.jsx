@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope, FaVideo } from 'react-icons/fa';
 import { resumeData } from '../data';
 import profileImg from '../assets/profile.jpg';
 import FadeInSection from './FadeInSection';
@@ -133,27 +133,55 @@ const Hero = () => {
                         VIEW WORK
                     </a>
 
-                    <a href={resumeData.contact.cv} target="_blank" rel="noreferrer" style={{
+                    <a href={`https://topmate.io/${resumeData.contact.topmate}`} target="_blank" rel="noopener noreferrer" style={{
                         display: 'inline-block',
                         padding: '12px 25px',
                         borderRadius: '30px',
-                        border: '1px solid var(--text)',
-                        color: 'var(--text)',
-                        background: 'transparent',
+                        border: '1px solid var(--primary)',
+                        color: 'black',
+                        background: 'var(--primary)',
                         letterSpacing: '1px',
                         fontWeight: 'bold',
                         cursor: 'pointer',
                         transition: '0.3s',
                         textDecoration: 'none',
+                        boxShadow: '0 0 15px rgba(0, 255, 65, 0.4)',
                         fontSize: '0.9rem'
                     }}
                         onMouseEnter={(e) => {
-                            e.target.style.background = 'rgba(255,255,255,0.1)';
-                            e.target.style.borderColor = 'white';
+                            e.target.style.transform = 'scale(1.05)';
+                            e.target.style.boxShadow = '0 0 25px var(--primary)';
                         }}
                         onMouseLeave={(e) => {
-                            e.target.style.background = 'transparent';
-                            e.target.style.borderColor = 'var(--text)';
+                            e.target.style.transform = 'scale(1)';
+                            e.target.style.boxShadow = '0 0 15px rgba(0, 255, 65, 0.4)';
+                        }}
+                    >
+                        BOOK A 1:1 CALL
+                    </a>
+
+                    <a href={resumeData.contact.cv} target="_blank" rel="noreferrer" style={{
+                        display: 'inline-block',
+                        padding: '12px 25px',
+                        borderRadius: '30px',
+                        border: '1px solid var(--primary)',
+                        color: 'black',
+                        background: 'var(--primary)',
+                        letterSpacing: '1px',
+                        fontWeight: 'bold',
+                        cursor: 'pointer',
+                        transition: '0.3s',
+                        textDecoration: 'none',
+                        boxShadow: '0 0 15px rgba(0, 255, 65, 0.4)',
+                        fontSize: '0.9rem'
+                    }}
+                        onMouseEnter={(e) => {
+                            e.target.style.transform = 'scale(1.05)';
+                            e.target.style.boxShadow = '0 0 25px var(--primary)';
+                        }}
+                        onMouseLeave={(e) => {
+                            e.target.style.transform = 'scale(1)';
+                            e.target.style.boxShadow = '0 0 15px rgba(0, 255, 65, 0.4)';
                         }}
                     >
                         RESUME
@@ -190,6 +218,13 @@ const Hero = () => {
                             onMouseEnter={(e) => e.target.style.color = 'var(--primary)'}
                             onMouseLeave={(e) => e.target.style.color = 'var(--text)'}>
                             <FaEnvelope />
+                        </a>
+                        <a href={`https://topmate.io/${resumeData.contact.topmate}`} target="_blank" rel="noopener noreferrer"
+                            className="connect-icon"
+                            style={{ color: 'var(--text)', transition: '0.3s' }}
+                            onMouseEnter={(e) => e.target.style.color = 'var(--primary)'}
+                            onMouseLeave={(e) => e.target.style.color = 'var(--text)'}>
+                            <FaVideo />
                         </a>
                     </div>
                 </div>
