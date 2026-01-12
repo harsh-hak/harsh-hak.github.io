@@ -22,7 +22,7 @@ function App() {
       <Navbar />
 
       {/* Main Content */}
-      <main className="main-content" style={{ position: 'relative', zIndex: 1 }}>
+      <main className="main-content main-layout">
         <Hero />
         <About />
         <Skills />
@@ -35,16 +35,8 @@ function App() {
       </main>
 
       {/* Footer */}
-      <footer style={{
-        textAlign: 'center',
-        padding: '2rem',
-        color: '#444',
-        borderTop: '1px solid #111',
-        background: 'rgba(0,0,0,0.9)',
-        position: 'relative',
-        zIndex: 1
-      }}>
-        <p style={{ fontSize: '0.8rem', letterSpacing: '2px' }}>
+      <footer className="footer">
+        <p className="footer-text">
           SYSTEM_TERMINATED. © {new Date().getFullYear()} HARSH_KANOJIA
         </p>
       </footer>

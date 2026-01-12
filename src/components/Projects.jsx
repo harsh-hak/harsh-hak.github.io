@@ -5,38 +5,27 @@ import FadeInSection from './FadeInSection';
 
 const Projects = () => {
     return (
-        <section id="projects" className="container" style={{ padding: '4rem 0' }}>
+        <section id="projects" className="container projects-container">
             <FadeInSection>
                 <h2 className="section-title">
                     <span style={{ color: 'var(--primary)' }}>//</span> PROJECTS
                 </h2>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
+                <div className="projects-grid">
                     {resumeData.projects.map((proj, idx) => (
                         <div key={idx} className="interactive-card">
                             <Terminal title={proj.title}>
-                                <div style={{ marginBottom: '1rem', color: 'var(--primary-dim)', fontSize: '0.9rem' }}>
+                                <div className="project-tech">
                                     {proj.tech}
                                 </div>
-                                <p style={{ lineHeight: '1.6', color: '#eee' }}>
+                                <p className="project-desc">
                                     {proj.description}
                                 </p>
-                                <div style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'flex-end', gap: '1rem' }}>
+                                <div className="project-links">
                                     {proj.demoLink && (
-                                        <a href={proj.demoLink} target="_blank" rel="noopener noreferrer" style={{
-                                            fontSize: '0.9rem',
-                                            borderBottom: '1px solid var(--primary)',
-                                            paddingBottom: '2px',
-                                            textDecoration: 'none',
-                                            marginRight: 'auto'
-                                        }}>Live Demo &rarr;</a>
+                                        <a href={proj.demoLink} target="_blank" rel="noopener noreferrer" className="project-link demo">Live Demo &rarr;</a>
                                     )}
-                                    <a href={proj.link || "#"} target="_blank" rel="noopener noreferrer" style={{
-                                        fontSize: '0.9rem',
-                                        borderBottom: '1px solid var(--primary)',
-                                        paddingBottom: '2px',
-                                        textDecoration: 'none'
-                                    }}>View Code &rarr;</a>
+                                    <a href={proj.link || "#"} target="_blank" rel="noopener noreferrer" className="project-link">View Code &rarr;</a>
                                 </div>
                             </Terminal>
                         </div>

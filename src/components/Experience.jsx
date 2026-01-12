@@ -5,7 +5,7 @@ import FadeInSection from './FadeInSection';
 
 const Experience = () => {
     return (
-        <section id="experience" className="container" style={{ padding: '4rem 0' }}>
+        <section id="experience" className="container experience-container">
             <FadeInSection>
                 <h2 className="section-title">
                     <span style={{ color: 'var(--primary)' }}>//</span> EXPERIENCE
@@ -18,28 +18,18 @@ const Experience = () => {
                     {resumeData.experience.map((exp, idx) => (
                         <div key={idx} className="timeline-item">
                             {/* Dot */}
-                            <div style={{
-                                position: 'absolute',
-                                left: '11px',
-                                top: '0',
-                                width: '20px',
-                                height: '20px',
-                                background: 'var(--bg)',
-                                border: '2px solid var(--primary)',
-                                borderRadius: '50%',
-                                zIndex: 1
-                            }} />
+                            <div className="timeline-dot" />
 
                             <div className="interactive-card">
                                 <Terminal title={`${exp.company}`}>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', marginBottom: '1rem', borderBottom: '1px dashed #333', paddingBottom: '0.5rem' }}>
-                                        <h3 style={{ fontSize: '1.2rem', color: 'var(--secondary)' }}>{exp.role}</h3>
-                                        <span style={{ color: '#ccc' }}>{exp.duration}</span>
+                                    <div className="experience-header">
+                                        <h3 className="experience-role">{exp.role}</h3>
+                                        <span className="experience-duration">{exp.duration}</span>
                                     </div>
-                                    <p style={{ color: '#aaa', fontStyle: 'italic', marginBottom: '1rem' }}>{exp.location}</p>
-                                    <ul style={{ paddingLeft: '20px', color: '#eee' }}>
+                                    <p className="experience-location">{exp.location}</p>
+                                    <ul className="experience-list">
                                         {exp.description.map((desc, i) => (
-                                            <li key={i} style={{ marginBottom: '0.5rem' }}>{desc}</li>
+                                            <li key={i} className="experience-list-item">{desc}</li>
                                         ))}
                                     </ul>
                                 </Terminal>
