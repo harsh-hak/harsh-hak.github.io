@@ -939,3 +939,23 @@ img {
   max-width: 600px;
   height: auto;
 }
+
+/* Visitor Counter */
+.visitor-counter {
+  margin-top: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--primary-dim);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.visitor-number {
+  color: var(--primary);
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}

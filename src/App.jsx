@@ -10,6 +10,7 @@ import Publications from './components/Publications';
 import GithubStats from './components/GithubStats';
 import Community from './components/Community';
 import Contact from './components/Contact';
+import VisitorCounter from './components/VisitorCounter';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
         <p className="footer-text">
           SYSTEM_TERMINATED. © {new Date().getFullYear()} HARSH_KANOJIA
         </p>
+        <VisitorCounter />
       </footer>
     </>
   );
