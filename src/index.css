@@ -863,6 +863,10 @@ img {
     word-break: break-word;
   }
 
+  .community-content {
+    padding: 1rem;
+  }
+
   .community-invite-btn {
     padding: 15px 20px;
     font-size: 0.9rem;
