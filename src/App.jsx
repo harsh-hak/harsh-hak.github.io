@@ -1,6 +1,7 @@
 import React from 'react';
 import MatrixBackground from './components/MatrixBackground';
 import Navbar from './components/Navbar';
+import SEO from './components/SEO';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
@@ -15,6 +16,11 @@ import VisitorCounter from './components/VisitorCounter';
 function App() {
   return (
     <>
+      <SEO
+        title="Harsh Kanojia - Software Engineer & Full Stack Developer"
+        description="Harsh Kanojia is a skilled Software Engineer and Full Stack Developer specializing in React, Node.js, and modern web technologies. Explore my portfolio to see my projects and skills."
+        keywords="Harsh Kanojia, Software Engineer, Full Stack Developer, React Developer, Portfolio, Web Development, Programming"
+      />
       {/* Background Effects */}
       <MatrixBackground />
       <div className="scanlines"></div>

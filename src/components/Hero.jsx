@@ -22,7 +22,7 @@ const Hero = () => {
         <section id="hero" className="hero-section">
             <FadeInSection delay="200ms">
                 <div className="profile-container">
-                    <img src={profileImg} alt="Profile" className="profile-img" />
+                    <img src={profileImg} alt="Harsh Kanojia - Profile" className="profile-img" />
                 </div>
 
                 <div className="hero-content">
