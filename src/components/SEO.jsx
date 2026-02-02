@@ -33,7 +33,7 @@ export default function SEO({
                     "@context": "https://schema.org",
                     "@type": "Person",
                     "name": name,
-                    "url": "https://harsh-hak.github.io/personal-portfolio-github/", // Using the gh-pages URL pattern
+                    "url": "https://harsh-hak.github.io/", // Correct User Page URL
                     "sameAs": [
                         "https://www.linkedin.com/in/harsh-kanojia-3bb7a0256/", // Replace with actual if known, using placeholder based on common patterns or previous conversations if available. User didn't provide, so I'll leave these as common placeholders to be updated.
                         "https://github.com/harsh-hak",
