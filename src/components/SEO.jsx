@@ -20,13 +20,15 @@ export default function SEO({
             <meta property="og:type" content={type} />
             <meta property="og:title" content={title} />
             <meta property="og:description" content={description} />
-            {/* <meta property="og:image" content={image} />  TODO: Add an OG Image later */}
+            <meta property="og:image" content="https://harsh-hak.github.io/og-image.jpg" />
+            <meta property="og:url" content="https://harsh-hak.github.io/" />
 
             {/* Twitter */}
             <meta name="twitter:creator" content={name} />
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:title" content={title} />
             <meta name="twitter:description" content={description} />
+            <meta name="twitter:image" content="https://harsh-hak.github.io/og-image.jpg" />
 
             {/* Structured Data (JSON-LD) for Person */}
             <script type="application/ld+json">
