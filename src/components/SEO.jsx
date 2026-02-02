@@ -6,7 +6,7 @@ export default function SEO({
     description,
     name = "Harsh Kanojia",
     type = "website",
-    keywords = "Harsh Kanojia, Portfolio, Developer, Software Engineer, React"
+    keywords = "Harsh Kanojia, Cyber Security, Malware Analysis, Security Researcher, InfoSec, Python"
 }) {
     return (
         <Helmet>
@@ -42,7 +42,7 @@ export default function SEO({
                         "https://github.com/harsh-hak",
                         // Add other social profiles here
                     ],
-                    "jobTitle": "Software Engineer",
+                    "jobTitle": "Cyber Security Researcher",
                     "worksFor": {
                         "@type": "Organization",
                         "name": "Self-Employed"

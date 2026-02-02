@@ -17,9 +17,9 @@ function App() {
   return (
     <>
       <SEO
-        title="Harsh Kanojia - Software Engineer & Full Stack Developer"
-        description="Harsh Kanojia is a skilled Software Engineer and Full Stack Developer specializing in React, Node.js, and modern web technologies. Explore my portfolio to see my projects and skills."
-        keywords="Harsh Kanojia, Software Engineer, Full Stack Developer, React Developer, Portfolio, Web Development, Programming"
+        title="Harsh Kanojia - Cyber Security Researcher & Malware Analyst"
+        description="Harsh Kanojia is a Cyber Security Researcher and Malware Analyst specializing in threat detection, digital forensics, and secure development. Explore my portfolio to see my security research and tools."
+        keywords="Harsh Kanojia, Cyber Security Researcher, Malware Analyst, Information Security, Penetration Testing, Digital Forensics, Python, Network Security"
       />
       {/* Background Effects */}
       <MatrixBackground />
