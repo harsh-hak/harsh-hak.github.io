@@ -14,6 +14,7 @@ export default function SEO({
             <title>{title}</title>
             <meta name='description' content={description} />
             <meta name="keywords" content={keywords} />
+            <meta name="google-site-verification" content="jzZW44CssBpEsDBuen0z8E4MyGG9ay_YV_rjHrS4lnI" />
 
             {/* Open Graph / Facebook */}
             <meta property="og:type" content={type} />
