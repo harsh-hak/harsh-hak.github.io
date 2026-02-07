@@ -822,7 +822,8 @@ img {
 
 .blog-image-wrapper {
   position: relative;
-  height: 200px;
+  width: 100%;
+  aspect-ratio: 50 / 21;
   overflow: hidden;
 }
 
