@@ -10,6 +10,7 @@ import Projects from './components/Projects';
 import Publications from './components/Publications';
 import GithubStats from './components/GithubStats';
 import Community from './components/Community';
+import Blog from './components/Blog';
 import Contact from './components/Contact';
 import VisitorCounter from './components/VisitorCounter';
 
@@ -38,6 +39,7 @@ function App() {
         <Publications />
         <GithubStats />
         <Community />
+        <Blog />
         <Contact />
       </main>
 
