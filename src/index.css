@@ -517,7 +517,8 @@ a:hover {
    ========================================= */
 
 .projects-container {
-  padding: 4rem 0;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .projects-grid {
@@ -570,7 +571,8 @@ a:hover {
    ========================================= */
 
 .experience-container {
-  padding: 4rem 0;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .timeline-dot {
@@ -623,7 +625,8 @@ a:hover {
    ========================================= */
 
 .publications-container {
-  padding: 4rem 0;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .publications-grid {
@@ -668,7 +671,8 @@ a:hover {
    ========================================= */
 
 .about-container {
-  padding: 4rem 0;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .about-grid {
@@ -707,7 +711,8 @@ a:hover {
    ========================================= */
 
 .skills-container {
-  padding: 4rem 0;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .skills-wrapper {
@@ -745,7 +750,8 @@ a:hover {
    ========================================= */
 
 .contact-section {
-  padding: 4rem 0;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   text-align: center;
   margin-bottom: 4rem;
 }
@@ -822,7 +828,8 @@ img {
    ========================================= */
 
 .blog-container {
-  padding: 4rem 0;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .blog-grid {
@@ -992,7 +999,8 @@ img {
    ========================================= */
 
 .community-container {
-  padding: 4rem 0;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .community-card {
@@ -1070,7 +1078,8 @@ img {
    ========================================= */
 
 .gh-stats-container {
-  padding: 4rem 0;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
