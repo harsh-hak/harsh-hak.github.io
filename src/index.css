@@ -1,6 +1,8 @@
 :root {
-  --primary: #00ff41;
-  --primary-dim: #008f11;
+  --primary: #10b981;
+  /* Emerald Green */
+  --primary-dim: #059669;
+  /* Darker Emerald */
   --secondary: #00b8ff;
   --accent: #ff003c;
   --bg: #080808;
@@ -37,7 +39,8 @@ h6 {
   margin: 0;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 0.5px;
+  /* Modern, tighter spacing */
 }
 
 a {

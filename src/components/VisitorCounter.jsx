@@ -21,13 +21,13 @@ const VisitorCounter = () => {
 
     if (loading) return (
         <div className="visitor-counter">
-            <span className="visitor-text">INITIALIZING_COUNTER...</span>
+            <span className="visitor-text">...</span>
         </div>
     );
 
     return (
         <div className="visitor-counter">
-            <span className="visitor-text">VISITORS_DETECTED: </span>
+            <span className="visitor-text">Visits: </span>
             <span className="visitor-number">{count}</span>
         </div>
     );
