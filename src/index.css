@@ -402,6 +402,13 @@ a:hover {
   margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+  .hero-content {
+    width: 100%;
+    padding: 0 40px;
+  }
+}
+
 .hero-title {
   font-size: clamp(2rem, 5vw, 3.5rem);
   margin-bottom: 1rem;
@@ -517,6 +524,16 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
+}
+
+@media (max-width: 768px) {
+
+  .projects-grid,
+  .blog-grid,
+  .publications-grid,
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .project-tech {
