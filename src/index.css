@@ -1102,81 +1102,155 @@ img {
    Community Styles
    ========================================= */
 
+/* =========================================
+   Community Styles (Enhanced)
+   ========================================= */
+
 .community-container {
   padding-top: 4rem;
   padding-bottom: 4rem;
+  perspective: 1000px;
 }
 
 .community-card {
   max-width: 800px;
   margin: 0 auto;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+.community-card:hover {
+  transform: rotateX(2deg) rotateY(2deg);
 }
 
 .community-content {
-  padding: 2rem;
+  padding: 3rem;
   text-align: center;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 255, 65, 0.05));
+  background: rgba(10, 10, 10, 0.8);
+  /* Deep Glass */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(0, 255, 65, 0.1);
   border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+/* Animated Gradient Border Effect */
+.community-content::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, var(--primary), transparent, var(--secondary), transparent, var(--primary));
+  background-size: 400%;
+  z-index: -1;
+  border-radius: 16px;
+  animation: border-flow 20s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes border-flow {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
 }
 
 .community-header {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1.5rem;
-  /* Gradient Text for Header */
-  background: linear-gradient(to right, #fff, var(--primary));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #fff;
   font-weight: 800;
-  letter-spacing: -0.5px;
+  letter-spacing: -1px;
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+  position: relative;
+  display: inline-block;
 }
 
 .community-desc {
   color: #ccc;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   line-height: 1.8;
   font-size: 1.1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .community-btn-wrapper {
   margin-bottom: 1rem;
+  position: relative;
+  z-index: 10;
 }
 
 .community-invite-btn {
   display: inline-block;
-  padding: 15px 40px;
-  background: var(--primary);
-  color: #000;
+  padding: 18px 50px;
+  background: transparent;
+  color: var(--primary);
   text-decoration: none;
   font-weight: 900;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   transition: 0.3s;
-  border-radius: 30px;
-  box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
-  font-size: 1rem;
+  border: 1px solid var(--primary);
+  position: relative;
+  overflow: hidden;
+  font-family: var(--font-mono);
   text-transform: uppercase;
+  font-size: 1.1rem;
+  clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
+}
+
+.community-invite-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 255, 65, 0.1);
+  transition: 0.3s;
+  transform: skewX(-20deg);
+}
+
+.community-invite-btn:hover::before {
+  left: 100%;
+  transition: 0.5s;
 }
 
 .community-invite-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 30px var(--primary-dim);
+  background: var(--primary);
+  color: #000;
+  box-shadow: 0 0 30px rgba(0, 255, 65, 0.4), inset 0 0 10px rgba(0, 0, 0, 0.5);
+  text-shadow: none;
 }
 
 @media (max-width: 768px) {
   .community-header {
-    font-size: 1.5rem;
-    word-break: break-word;
+    font-size: 1.8rem;
   }
 
   .community-content {
-    padding: 1rem;
+    padding: 2rem 1rem;
   }
 
   .community-invite-btn {
-    padding: 15px 20px;
+    padding: 15px 30px;
     font-size: 0.9rem;
     width: 100%;
-    max-width: 300px;
   }
 }
 

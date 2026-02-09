@@ -23,12 +23,12 @@ const Community = () => {
 
                             <div className="community-btn-wrapper">
                                 <a
-                                    href="https://forms.gle/xsLyYgHzMiYsp8zx6"
+                                    href="https://cybersphere-community.github.io/"
                                     target="_blank"
                                     rel="noreferrer"
                                     className="community-invite-btn"
                                 >
-                                    CLICK_HERE_TO_JOIN
+                                    INITIALIZE_UPLINK
                                 </a>
                             </div>
                         </div>
