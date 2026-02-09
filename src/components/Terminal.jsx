@@ -3,14 +3,17 @@ import React from 'react';
 const Terminal = ({ title = "Info", children, className = "" }) => {
     return (
         <div className={`terminal-window ${className}`} style={{
-            border: '1px solid var(--primary-dim)',
-            background: 'rgba(5, 5, 5, 0.95)', // Dark, almost opaque for readability
+            border: '1px solid rgba(255, 255, 255, 0.1)',
+            background: 'rgba(15, 15, 15, 0.7)', // Glassmorphism
+            backdropFilter: 'blur(10px)',
+            WebkitBackdropFilter: 'blur(10px)',
             color: '#f0f0f0', // High contrast text
-            boxShadow: '0 0 20px rgba(0, 255, 65, 0.05)',
+            boxShadow: '0 0 40px rgba(0, 255, 65, 0.05)',
             marginBottom: '2rem',
             borderRadius: '15px',
             overflow: 'hidden',
-            maxWidth: '100%'
+            maxWidth: '100%',
+            transition: 'all 0.3s ease'
         }}>
             <div className="terminal-header" style={{
                 background: 'var(--primary-dim)',

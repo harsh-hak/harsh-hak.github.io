@@ -22,7 +22,10 @@ body {
   color: var(--text);
   font-family: var(--font-main);
   overflow-x: hidden;
+  line-height: 1.7;
+  /* Improved readability */
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
@@ -289,9 +292,10 @@ a:hover {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(8, 8, 8, 0.95);
-  border-bottom: 1px solid var(--primary-dim);
-  backdrop-filter: blur(5px);
+  background: rgba(8, 8, 8, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .navbar-container {
@@ -381,9 +385,17 @@ a:hover {
   margin-bottom: 2rem;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid var(--primary);
-  box-shadow: 0 0 20px var(--primary-dim);
+  border: 2px solid rgba(0, 255, 65, 0.3);
+  /* Softer border */
+  box-shadow: 0 0 30px rgba(0, 255, 65, 0.2);
+  /* Diffuse glow */
   margin: 0 auto 2rem auto;
+  transition: all 0.5s ease;
+}
+
+.profile-container:hover {
+  box-shadow: 0 0 50px rgba(0, 255, 65, 0.4);
+  border-color: var(--primary);
 }
 
 .profile-img {
@@ -839,13 +851,23 @@ img {
 }
 
 .blog-card {
-  background: rgba(10, 10, 10, 0.8);
-  border: 1px solid #333;
+  background: rgba(15, 15, 15, 0.6);
+  /* Glassmorphism */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   height: 100%;
   border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 255, 65, 0.5);
+  box-shadow: 0 10px 30px -10px rgba(0, 255, 65, 0.2);
 }
 
 .blog-image-wrapper {
@@ -908,6 +930,7 @@ img {
   flex-grow: 1;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -1019,11 +1042,13 @@ img {
 .community-header {
   font-size: 2rem;
   margin-bottom: 1.5rem;
+  /* Gradient Text for Header */
   background: linear-gradient(to right, #fff, var(--primary));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: bold;
+  font-weight: 800;
+  letter-spacing: -0.5px;
 }
 
 .community-desc {
@@ -1103,10 +1128,13 @@ img {
 
 .gh-chart-container {
   padding: 1.5rem;
-  background: rgba(5, 5, 5, 0.95);
-  border: 1px solid var(--primary-dim);
+  padding: 1.5rem;
+  background: rgba(15, 15, 15, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0, 255, 65, 0.05);
+  box-shadow: 0 0 40px rgba(0, 255, 65, 0.05);
   max-width: 100%;
   overflow-x: auto;
   text-align: center;
