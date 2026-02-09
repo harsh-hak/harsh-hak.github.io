@@ -15,8 +15,8 @@ const Blog = () => {
     };
 
     useEffect(() => {
-        // Optimization: Fetch only the 6 posts we need directly from the API
-        fetch('https://dev.to/api/articles?username=harsh_hak&per_page=6')
+        // Optimization: Fetch only the 4 posts we need directly from the API
+        fetch('https://dev.to/api/articles?username=harsh_hak&per_page=4')
             .then(res => res.json())
             .then(data => {
                 setPosts(data);

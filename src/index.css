@@ -186,7 +186,7 @@ a:hover {
   }
 
   .container {
-    padding: 0 25px;
+    padding: 0 40px;
   }
 
   /* Hero adjustments */
@@ -368,7 +368,10 @@ a:hover {
   justify-content: center;
   align-items: center;
   position: relative;
-  padding-top: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 100px;
   padding-bottom: 2rem;
 }
 
@@ -807,7 +810,7 @@ img {
 
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
 
