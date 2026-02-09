@@ -186,7 +186,7 @@ a:hover {
   }
 
   .container {
-    padding: 0 20px;
+    padding: 0 10px;
   }
 
   /* Hero adjustments */
@@ -405,7 +405,7 @@ a:hover {
 @media (max-width: 768px) {
   .hero-content {
     width: 100%;
-    padding: 0 20px;
+    padding: 0 10px;
   }
 }
 
@@ -845,6 +845,7 @@ img {
   display: flex;
   flex-direction: column;
   height: 100%;
+  border-radius: 15px;
 }
 
 .blog-image-wrapper {
@@ -1012,6 +1013,7 @@ img {
   padding: 2rem;
   text-align: center;
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 255, 65, 0.05));
+  border-radius: 15px;
 }
 
 .community-header {
@@ -1103,7 +1105,7 @@ img {
   padding: 1.5rem;
   background: rgba(5, 5, 5, 0.95);
   border: 1px solid var(--primary-dim);
-  border-radius: 4px;
+  border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 255, 65, 0.05);
   max-width: 100%;
   overflow-x: auto;
@@ -1128,7 +1130,7 @@ img {
   padding: 1rem;
   background: rgba(5, 5, 5, 0.95);
   border: 1px solid var(--accent);
-  border-radius: 4px;
+  border-radius: 15px;
   box-shadow: 0 0 20px rgba(255, 0, 60, 0.1);
   width: 100%;
   display: flex;

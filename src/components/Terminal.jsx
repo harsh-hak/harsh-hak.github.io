@@ -8,7 +8,7 @@ const Terminal = ({ title = "Info", children, className = "" }) => {
             color: '#f0f0f0', // High contrast text
             boxShadow: '0 0 20px rgba(0, 255, 65, 0.05)',
             marginBottom: '2rem',
-            borderRadius: '4px',
+            borderRadius: '15px',
             overflow: 'hidden',
             maxWidth: '100%'
         }}>
