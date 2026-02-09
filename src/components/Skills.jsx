@@ -9,14 +9,14 @@ const Skills = () => {
             </h2>
 
             <div className="skills-wrapper">
-                {resumeData.skills.map((skill, idx) => (
-                    <div
-                        key={idx}
-                        className="skill-badge"
-                    >
-                        {skill}
-                    </div>
-                ))}
+                <div className="skills-track">
+                    {/* Double the list for infinite scroll effect */}
+                    {[...resumeData.skills, ...resumeData.skills].map((skill, idx) => (
+                        <div key={idx} className="skill-badge">
+                            {skill}
+                        </div>
+                    ))}
+                </div>
             </div>
         </section>
     );
