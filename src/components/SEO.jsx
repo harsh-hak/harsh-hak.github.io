@@ -38,9 +38,9 @@ export default function SEO({
                     "name": name,
                     "url": "https://harsh-hak.github.io/", // Correct User Page URL
                     "sameAs": [
-                        "https://www.linkedin.com/in/harsh-kanojia-3bb7a0256/", // Replace with actual if known, using placeholder based on common patterns or previous conversations if available. User didn't provide, so I'll leave these as common placeholders to be updated.
+                        "https://www.linkedin.com/in/harsh-kanojia-3bb7a0256/",
                         "https://github.com/harsh-hak",
-                        // Add other social profiles here
+                        "https://topmate.io/harsh_kanojia"
                     ],
                     "jobTitle": "Cyber Security Researcher",
                     "worksFor": {
@@ -49,6 +49,7 @@ export default function SEO({
                     }
                 })}
             </script>
-        </Helmet>
+        </script>
+        </Helmet >
     );
 }

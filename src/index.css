@@ -531,14 +531,14 @@ a:hover {
    ========================================= */
 
 .projects-container {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 @media (max-width: 768px) {
@@ -585,8 +585,8 @@ a:hover {
    ========================================= */
 
 .experience-container {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .timeline-dot {
@@ -639,8 +639,8 @@ a:hover {
    ========================================= */
 
 .publications-container {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .publications-grid {
@@ -685,14 +685,14 @@ a:hover {
    ========================================= */
 
 .about-container {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .about-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .about-text {
@@ -725,8 +725,8 @@ a:hover {
    ========================================= */
 
 .skills-container {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   position: relative;
   overflow: hidden;
 }
@@ -1185,8 +1185,8 @@ img {
    ========================================= */
 
 .gh-stats-container {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;

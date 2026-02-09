@@ -6,14 +6,16 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Publications from './components/Publications';
-import GithubStats from './components/GithubStats';
-import Community from './components/Community';
-import Blog from './components/Blog';
 import Contact from './components/Contact';
 import VisitorCounter from './components/VisitorCounter';
 import { resumeData } from './data';
+
+// Lazy Load heavy components
+const Projects = React.lazy(() => import('./components/Projects'));
+const Publications = React.lazy(() => import('./components/Publications'));
+const GithubStats = React.lazy(() => import('./components/GithubStats'));
+const Community = React.lazy(() => import('./components/Community'));
+const Blog = React.lazy(() => import('./components/Blog'));
 
 function App() {
   return (
@@ -36,11 +38,14 @@ function App() {
         <About />
         <Skills />
         <Experience />
-        <Projects />
-        <Publications />
-        <GithubStats />
-        <Community />
-        <Blog />
+        <Experience />
+        <React.Suspense fallback={<div className="terminal-loader">LOADING_DATA...</div>}>
+          <Projects />
+          <Publications />
+          <GithubStats />
+          <Community />
+          <Blog />
+        </React.Suspense>
         <Contact />
       </main>
 
