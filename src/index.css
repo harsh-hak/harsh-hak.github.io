@@ -186,7 +186,7 @@ a:hover {
   }
 
   .container {
-    padding: 0 40px;
+    padding: 0 20px;
   }
 
   /* Hero adjustments */
@@ -405,7 +405,7 @@ a:hover {
 @media (max-width: 768px) {
   .hero-content {
     width: 100%;
-    padding: 0 40px;
+    padding: 0 20px;
   }
 }
 
