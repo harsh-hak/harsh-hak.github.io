@@ -49,7 +49,6 @@ export default function SEO({
                     }
                 })}
             </script>
-        </script>
-        </Helmet >
+        </Helmet>
     );
 }
