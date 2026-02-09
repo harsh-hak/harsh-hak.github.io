@@ -1,8 +1,6 @@
 :root {
-  --primary: #10b981;
-  /* Emerald Green */
-  --primary-dim: #059669;
-  /* Darker Emerald */
+  --primary: #00ff41;
+  --primary-dim: #008f11;
   --secondary: #00b8ff;
   --accent: #ff003c;
   --bg: #080808;

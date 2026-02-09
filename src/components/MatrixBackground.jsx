@@ -23,7 +23,7 @@ const MatrixBackground = () => {
             ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
             ctx.fillRect(0, 0, width, height);
 
-            ctx.fillStyle = 'rgba(16, 185, 129, 0.15)'; // Subtle Emerald
+            ctx.fillStyle = 'rgba(0, 255, 65, 0.15)'; // Neon Green, Light Opacity
             ctx.font = '15px monospace';
 
             for (let i = 0; i < drops.length; i++) {
@@ -38,7 +38,7 @@ const MatrixBackground = () => {
             }
         };
 
-        const interval = setInterval(draw, 75); // Slower animation
+        const interval = setInterval(draw, 50); // Original Speed
 
         const handleResize = () => {
             width = window.innerWidth;
