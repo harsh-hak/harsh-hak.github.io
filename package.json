@@ -2,6 +2,7 @@
   "name": "personal-portfolio-github",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://harsh-hak.github.io/",
   "type": "module",
   "scripts": {
     "dev": "vite",
