@@ -19,13 +19,16 @@ const About = () => {
                     </Terminal>
 
                     <Terminal title="Education">
-                        {resumeData.education.map((edu, idx) => (
-                            <div key={idx} className="edu-item">
-                                <div className="edu-degree">{edu.degree}</div>
-                                <div className="edu-inst">{edu.institution}</div>
-                                <div className="edu-year">{edu.year} | {edu.notes}</div>
-                            </div>
-                        ))}
+                        <div itemScope itemType="https://schema.org/ItemList">
+                            <meta itemProp="name" content="Education" />
+                            {resumeData.education.map((edu, idx) => (
+                                <div key={idx} className="edu-item" itemProp="itemListElement" itemScope itemType="https://schema.org/EducationalOrganization">
+                                    <div className="edu-degree" itemProp="name">{edu.degree}</div>
+                                    <div className="edu-inst" itemProp="alumniOf">{edu.institution}</div>
+                                    <div className="edu-year"><span itemProp="startDate">{edu.year.split(' - ')[0]}</span> - <span itemProp="endDate">{edu.year.split(' - ')[1]}</span> | {edu.notes}</div>
+                                </div>
+                            ))}
+                        </div>
                     </Terminal>
                 </div>
             </FadeInSection>

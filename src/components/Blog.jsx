@@ -40,9 +40,13 @@ const Blog = () => {
                         <span className="blink">FETCHING_DATA_FROM_DEV.TO...</span>
                     </div>
                 ) : (
-                    <div className="blog-grid">
+                    <div className="blog-grid" itemScope itemType="https://schema.org/Blog">
+                        <meta itemProp="name" content="Harsh Kanojia's Cyber Security Blog" />
+                        <meta itemProp="description" content="Latest insights on cyber security, malware analysis, and threat detection." />
+
                         {posts.map(post => (
-                            <div key={post.id} className="blog-card interactive-card">
+                            <article key={post.id} className="blog-card interactive-card" itemProp="blogPost" itemScope itemType="https://schema.org/BlogPosting">
+                                <meta itemProp="mainEntityOfPage" content={post.url} />
                                 <div className="blog-image-wrapper">
                                     <img
                                         src={getOptimizedImageUrl(post.social_image || post.cover_image)}
@@ -52,16 +56,20 @@ const Blog = () => {
                                         decoding="async"
                                         width="600"
                                         height="300"
+                                        itemProp="image"
                                     />
                                     <div className="blog-overlay"></div>
                                 </div>
                                 <div className="blog-content">
-                                    <h3 className="blog-title">{post.title}</h3>
+                                    <h3 className="blog-title" itemProp="headline">{post.title}</h3>
                                     <div className="blog-meta">
-                                        <span className="blog-date">{post.readable_publish_date}, {new Date(post.published_at).getFullYear()}</span>
+                                        <span className="blog-date" itemProp="datePublished" content={post.published_at}>
+                                            {post.readable_publish_date}, {new Date(post.published_at).getFullYear()}
+                                        </span>
                                         <span className="blog-read-time">{post.reading_time_minutes} min read</span>
+                                        <meta itemProp="author" content="Harsh Kanojia" />
                                     </div>
-                                    <p className="blog-desc">
+                                    <p className="blog-desc" itemProp="description">
                                         {post.description}
                                     </p>
                                     <div className="blog-tags">
@@ -69,11 +77,11 @@ const Blog = () => {
                                             <span key={idx} className="blog-tag">#{tag}</span>
                                         ))}
                                     </div>
-                                    <a href={post.url} target="_blank" rel="noopener noreferrer" className="read-more-btn">
+                                    <a href={post.url} target="_blank" rel="noopener noreferrer" className="read-more-btn" itemProp="url">
                                         <FaDev className="dev-icon" /> READ_FULL_ARTICLE
                                     </a>
                                 </div>
-                            </div>
+                            </article>
                         ))}
                     </div>
                 )}

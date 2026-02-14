@@ -21,8 +21,15 @@ const Hero = () => {
     return (
         <section id="hero" className="hero-section">
             <FadeInSection delay="200ms">
-                <div className="profile-container">
-                    <img src={profileImg} alt="Harsh Kanojia - Profile" className="profile-img" />
+                <div className="profile-container" itemScope itemType="https://schema.org/Person">
+                    <img
+                        src={profileImg}
+                        alt="Harsh Kanojia - Cyber Security Researcher and Malware Analyst"
+                        className="profile-img"
+                        itemProp="image"
+                        width="220"
+                        height="220"
+                    />
                 </div>
 
                 <div className="hero-content">
@@ -66,19 +73,19 @@ const Hero = () => {
                     </p>
                     <div className="connect-icons">
                         <a href={`https://linkedin.com/in/${resumeData.contact.linkedin}`} target="_blank" rel="noopener noreferrer"
-                            className="connect-icon">
+                            className="connect-icon" aria-label="LinkedIn Profile">
                             <FaLinkedin />
                         </a>
                         <a href={`https://github.com/${resumeData.contact.github}`} target="_blank" rel="noopener noreferrer"
-                            className="connect-icon">
+                            className="connect-icon" aria-label="GitHub Profile">
                             <FaGithub />
                         </a>
                         <a href={`mailto:${resumeData.contact.email}`}
-                            className="connect-icon">
+                            className="connect-icon" aria-label="Send Email">
                             <FaEnvelope />
                         </a>
                         <a href={`https://topmate.io/${resumeData.contact.topmate}`} target="_blank" rel="noopener noreferrer"
-                            className="connect-icon">
+                            className="connect-icon" aria-label="Topmate 1:1 Call">
                             <FaVideo />
                         </a>
                     </div>
