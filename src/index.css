@@ -3,12 +3,11 @@
   --primary-dim: #008f11;
   --secondary: #00b8ff;
   --accent: #ff003c;
-  --bg: #080808;
-  --surface: #111;
+  --bg: #000000;
+  --surface: #0a0a0a;
   --text: #e0e0e0;
   --font-main: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   --font-mono: 'Courier Prime', 'Courier New', monospace;
-  /* Kept for code snippets only */
 }
 
 * {
@@ -294,7 +293,7 @@ a:hover {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(8, 8, 8, 0.8);
+  background: rgba(0, 0, 0, 0.8);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -1390,4 +1389,169 @@ img {
   color: var(--primary);
   font-weight: bold;
   text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+/* =========================================
+   Community Extended Styles
+   ========================================= */
+
+.community-founder-header {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.community-founder-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.community-founder-badge {
+  display: inline-block;
+  background: rgba(0, 255, 65, 0.12);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 4px 14px;
+  border-radius: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: 0 0 12px rgba(0, 255, 65, 0.2);
+}
+
+.community-org-name {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-shadow: 0 0 30px rgba(0, 255, 65, 0.4);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.community-tagline {
+  color: #aaa;
+  font-size: 1rem;
+  max-width: 550px;
+  line-height: 1.7;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+/* Stats Row */
+.community-stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: rgba(0, 255, 65, 0.03);
+  border: 1px solid rgba(0, 255, 65, 0.1);
+  border-radius: 12px;
+}
+
+.community-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  min-width: 110px;
+}
+
+.community-stat-value {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--primary);
+  font-family: var(--font-mono);
+  text-shadow: 0 0 15px rgba(0, 255, 65, 0.5);
+  line-height: 1;
+}
+
+.community-stat-label {
+  font-size: 0.75rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* CTA Row */
+.community-cta-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.community-join-btn {
+  display: inline-block;
+  padding: 13px 32px;
+  background: var(--primary);
+  color: #000;
+  font-weight: 900;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+}
+
+.community-join-btn:hover {
+  background: #00e639;
+  color: #000;
+  box-shadow: 0 0 35px rgba(0, 255, 65, 0.5);
+  transform: translateY(-2px);
+  text-shadow: none;
+}
+
+.community-visit-btn {
+  display: inline-block;
+  padding: 13px 32px;
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+}
+
+.community-visit-btn:hover {
+  background: rgba(0, 255, 65, 0.08);
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+  transform: translateY(-2px);
+  color: var(--primary);
+  text-shadow: none;
+}
+
+@media (max-width: 768px) {
+  .community-stats {
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+
+  .community-stat-value {
+    font-size: 1.6rem;
+  }
+
+  .community-cta-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .community-join-btn,
+  .community-visit-btn {
+    width: 100%;
+    text-align: center;
+  }
 }

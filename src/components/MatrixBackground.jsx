@@ -1,5 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 
+const PARTICLE_COUNT = 90;
+const CONNECTION_DIST = 160;
+const SPEED = 0.4;
+
 const MatrixBackground = () => {
     const canvasRef = useRef(null);
 
@@ -9,54 +13,92 @@ const MatrixBackground = () => {
 
         let width = window.innerWidth;
         let height = window.innerHeight;
+        let animationFrameId;
 
         canvas.width = width;
         canvas.height = height;
 
-        const columns = Math.floor(width / 20);
-        const drops = new Array(columns).fill(1);
-
-        const charArray = ['0', '1', 'H', 'A', 'C', 'K', 'E', 'R', 'X', 'Z', 'S', 'E', 'C', 'µ', '¥', '€', '£'];
+        // Initialise particles
+        const particles = Array.from({ length: PARTICLE_COUNT }, () => ({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            vx: (Math.random() - 0.5) * SPEED,
+            vy: (Math.random() - 0.5) * SPEED,
+            r: Math.random() * 1.5 + 1,
+            pulse: Math.random() * Math.PI * 2, // phase offset
+        }));
 
         const draw = () => {
-            // Semi-transparent black to create fade trail - higher opacity means faster fade (less clutter)
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
-            ctx.fillRect(0, 0, width, height);
+            ctx.clearRect(0, 0, width, height);
 
-            ctx.fillStyle = 'rgba(0, 255, 65, 0.15)'; // Neon Green, Light Opacity
-            ctx.font = '15px monospace';
+            // Update + draw particles
+            for (let i = 0; i < particles.length; i++) {
+                const p = particles[i];
+                p.x += p.vx;
+                p.y += p.vy;
+                p.pulse += 0.02;
 
-            for (let i = 0; i < drops.length; i++) {
-                const text = charArray[Math.floor(Math.random() * charArray.length)];
-                ctx.fillText(text, i * 20, drops[i] * 20);
+                // Bounce off edges
+                if (p.x < 0 || p.x > width) p.vx *= -1;
+                if (p.y < 0 || p.y > height) p.vy *= -1;
 
-                // Reset drop to top randomly or if it passes bottom
-                if (drops[i] * 20 > height && Math.random() > 0.975) {
-                    drops[i] = 0;
+                // Pulsing glow radius
+                const glowR = p.r + Math.sin(p.pulse) * 0.1;
+                const alpha = 0.2 + Math.sin(p.pulse) * 0.1;
+
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, glowR, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(0, 255, 65, ${alpha})`;
+                ctx.shadowColor = '#00ff41';
+                ctx.shadowBlur = 0;
+                ctx.fill();
+                ctx.shadowBlur = 0;
+
+                // Draw connections
+                for (let j = i + 1; j < particles.length; j++) {
+                    const q = particles[j];
+                    const dx = p.x - q.x;
+                    const dy = p.y - q.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < CONNECTION_DIST) {
+                        const lineAlpha = (1 - dist / CONNECTION_DIST) * 0.18;
+
+                        // Alternate some lines to a blue tint for depth
+                        const isBlue = (i + j) % 7 === 0;
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(q.x, q.y);
+                        ctx.strokeStyle = isBlue
+                            ? `rgba(0, 184, 255, ${lineAlpha * 1.4})`
+                            : `rgba(0, 255, 65, ${lineAlpha})`;
+                        ctx.lineWidth = 0.6;
+                        ctx.stroke();
+                    }
                 }
-                drops[i]++;
             }
+
+            animationFrameId = requestAnimationFrame(draw);
         };
 
-        const interval = setInterval(draw, 50); // Original Speed
+        draw();
 
+        let resizeTimeout;
         const handleResize = () => {
-            width = window.innerWidth;
-            height = window.innerHeight;
-            canvas.width = width;
-            canvas.height = height;
-            // Re-initialize drops on resize to avoid gaps
-            const newColumns = Math.floor(width / 20);
-            if (newColumns > drops.length) {
-                const diff = newColumns - drops.length;
-                for (let j = 0; j < diff; j++) drops.push(1);
-            }
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                width = window.innerWidth;
+                height = window.innerHeight;
+                canvas.width = width;
+                canvas.height = height;
+            }, 100);
         };
 
         window.addEventListener('resize', handleResize);
 
         return () => {
-            clearInterval(interval);
+            cancelAnimationFrame(animationFrameId);
+            clearTimeout(resizeTimeout);
             window.removeEventListener('resize', handleResize);
         };
     }, []);
@@ -71,7 +113,7 @@ const MatrixBackground = () => {
                 zIndex: -1,
                 width: '100%',
                 height: '100%',
-                background: '#000'
+                background: '#000000',
             }}
         />
     );

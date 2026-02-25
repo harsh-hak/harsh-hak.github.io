@@ -3,6 +3,7 @@ import { FaLinkedin, FaGithub, FaEnvelope, FaVideo } from 'react-icons/fa';
 import { resumeData } from '../data';
 import profileImg from '../assets/profile.jpg';
 import FadeInSection from './FadeInSection';
+import VisitorCounter from './VisitorCounter';
 
 const Hero = () => {
     const [text, setText] = useState('');
@@ -18,6 +19,19 @@ const Hero = () => {
         return () => clearInterval(interval);
     }, [fullText]);
 
+    const handleMagneticObj = (e) => {
+        if (window.matchMedia("(pointer: coarse)").matches) return; // Disable on mobile
+        const btn = e.currentTarget;
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+    };
+
+    const resetMagneticObj = (e) => {
+        e.currentTarget.style.transform = 'translate(0px, 0px)';
+    };
+
     return (
         <section id="hero" className="hero-section">
             <FadeInSection delay="200ms">
@@ -29,6 +43,8 @@ const Hero = () => {
                         itemProp="image"
                         width="220"
                         height="220"
+                        loading="eager"
+                        fetchpriority="high"
                     />
                 </div>
 
@@ -54,15 +70,15 @@ const Hero = () => {
 
             <FadeInSection delay="800ms">
                 <div className="hero-actions">
-                    <a href="#projects" className="hero-btn">
+                    <a href="#projects" className="hero-btn" onMouseMove={handleMagneticObj} onMouseLeave={resetMagneticObj}>
                         VIEW WORK
                     </a>
 
-                    <a href={`https://topmate.io/${resumeData.contact.topmate}`} target="_blank" rel="noopener noreferrer" className="hero-btn">
+                    <a href={`https://topmate.io/${resumeData.contact.topmate}`} target="_blank" rel="noopener noreferrer" className="hero-btn" onMouseMove={handleMagneticObj} onMouseLeave={resetMagneticObj}>
                         BOOK A 1:1 CALL
                     </a>
 
-                    <a href={resumeData.contact.cv} target="_blank" rel="noreferrer" className="hero-btn">
+                    <a href={resumeData.contact.cv} target="_blank" rel="noreferrer" className="hero-btn" onMouseMove={handleMagneticObj} onMouseLeave={resetMagneticObj}>
                         RESUME
                     </a>
                 </div>
@@ -73,22 +89,26 @@ const Hero = () => {
                     </p>
                     <div className="connect-icons">
                         <a href={`https://linkedin.com/in/${resumeData.contact.linkedin}`} target="_blank" rel="noopener noreferrer"
-                            className="connect-icon" aria-label="LinkedIn Profile">
+                            className="connect-icon" aria-label="LinkedIn Profile" onMouseMove={handleMagneticObj} onMouseLeave={resetMagneticObj}>
                             <FaLinkedin />
                         </a>
                         <a href={`https://github.com/${resumeData.contact.github}`} target="_blank" rel="noopener noreferrer"
-                            className="connect-icon" aria-label="GitHub Profile">
+                            className="connect-icon" aria-label="GitHub Profile" onMouseMove={handleMagneticObj} onMouseLeave={resetMagneticObj}>
                             <FaGithub />
                         </a>
                         <a href={`mailto:${resumeData.contact.email}`}
-                            className="connect-icon" aria-label="Send Email">
+                            className="connect-icon" aria-label="Send Email" onMouseMove={handleMagneticObj} onMouseLeave={resetMagneticObj}>
                             <FaEnvelope />
                         </a>
                         <a href={`https://topmate.io/${resumeData.contact.topmate}`} target="_blank" rel="noopener noreferrer"
-                            className="connect-icon" aria-label="Topmate 1:1 Call">
+                            className="connect-icon" aria-label="Topmate 1:1 Call" onMouseMove={handleMagneticObj} onMouseLeave={resetMagneticObj}>
                             <FaVideo />
                         </a>
                     </div>
+                </div>
+
+                <div style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'center' }}>
+                    <VisitorCounter />
                 </div>
             </FadeInSection>
         </section>

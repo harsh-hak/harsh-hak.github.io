@@ -8,12 +8,25 @@ const Navbar = () => {
         { label: 'ABOUT', href: '#about' },
         { label: 'SKILLS', href: '#skills' },
         { label: 'EXPERIENCE', href: '#experience' },
+        { label: 'COMMUNITY', href: '#community' },
         { label: 'PROJECTS', href: '#projects' },
         { label: 'PUBLICATIONS', href: '#publications' },
         { label: 'BLOG', href: '#blog' },
-        { label: 'COMMUNITY', href: '#community' },
         // { label: 'CONTACT', href: '#contact' }
     ];
+
+    const handleNavClick = (e, href) => {
+        e.preventDefault();
+        setIsOpen(false);
+
+        const target = document.querySelector(href);
+        if (!target) return;
+
+        const navbarHeight = 64; // px — matches fixed navbar height
+        const top = target.getBoundingClientRect().top + window.scrollY - navbarHeight;
+
+        window.scrollTo({ top, behavior: 'smooth' });
+    };
 
     return (
         <nav className="navbar">
@@ -26,8 +39,12 @@ const Navbar = () => {
                 <div
                     onClick={() => setIsOpen(!isOpen)}
                     className="mobile-toggle"
+                    aria-label={isOpen ? "Close menu" : "Open menu"}
+                    aria-expanded={isOpen}
+                    role="button"
+                    tabIndex="0"
                 >
-                    {isOpen ? 'X' : '≡'}
+                    {isOpen ? '✕' : '≡'}
                 </div>
 
                 {/* Nav Links */}
@@ -37,7 +54,7 @@ const Navbar = () => {
                             key={item.label}
                             href={item.href}
                             className="nav-link"
-                            onClick={() => setIsOpen(false)} // Close menu on click
+                            onClick={(e) => handleNavClick(e, item.href)}
                         >
                             {item.label}
                         </a>

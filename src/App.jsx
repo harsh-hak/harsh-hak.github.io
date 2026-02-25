@@ -1,5 +1,6 @@
 import React from 'react';
 import MatrixBackground from './components/MatrixBackground';
+import BackToTop from './components/BackToTop';
 import Navbar from './components/Navbar';
 import SEO from './components/SEO';
 import Hero from './components/Hero';
@@ -28,6 +29,7 @@ function App() {
       {/* Background Effects */}
       <MatrixBackground />
       <div className="scanlines"></div>
+      <BackToTop />
 
       {/* Navigation */}
       <Navbar />
@@ -38,12 +40,13 @@ function App() {
         <About />
         <Skills />
         <Experience />
-        <Experience />
+        <React.Suspense fallback={<div className="terminal-loader">LOADING_DATA...</div>}>
+          <Community />
+        </React.Suspense>
         <React.Suspense fallback={<div className="terminal-loader">LOADING_DATA...</div>}>
           <Projects />
           <Publications />
           <GithubStats />
-          <Community />
           <Blog />
         </React.Suspense>
         <Contact />
