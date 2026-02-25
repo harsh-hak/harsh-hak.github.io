@@ -523,6 +523,58 @@ a:hover {
   .connect-icon {
     font-size: 2rem;
   }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .hero-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* =========================================
+   Visitor Counter Styles
+   ========================================= */
+
+.visitor-counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: rgba(0, 255, 65, 0.05);
+  border: 1px solid rgba(0, 255, 65, 0.2);
+  border-radius: 20px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
+
+.visitor-text {
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.visitor-number {
+  color: var(--primary);
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 1.8rem !important;
+  }
+
+  .project-link {
+    padding: 8px 12px;
+    background: rgba(0, 255, 65, 0.05);
+    border-radius: 4px;
+  }
 }
 
 /* =========================================
