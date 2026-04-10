@@ -45,6 +45,13 @@ export const resumeData = {
   ],
   projects: [
     {
+      title: "ShadowScan",
+      tech: "Python, Asyncio, Security",
+      description: "A tactical security tool that automates deep infrastructure reconnaissance. Featuring an asynchronous scanning engine and automated vulnerability flagging, it provides security researchers with a streamlined workflow for identifying service risks and misconfigurations across diverse network environments.",
+      link: "https://github.com/harsh-hak/ShadowScan",
+      demoLink: "https://harsh-hak.github.io/ShadowScan/"
+    },
+    {
       title: "Malware Analyzer X",
       tech: "Python, CLI",
       description: "A Python-based static malware analysis and network packet detection tool for Linux ELF binaries. Automates string extraction, entropy scoring, YARA signature matching, and VirusTotal lookup.",
