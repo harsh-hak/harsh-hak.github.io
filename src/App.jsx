@@ -85,6 +85,7 @@ function App() {
               <a href={`https://github.com/${resumeData.contact.github}`} target="_blank" rel="noreferrer" className="footer-link">GitHub</a>
               <a href={`mailto:${resumeData.contact.email}`} className="footer-link">Email</a>
               <a href={`https://topmate.io/${resumeData.contact.topmate}`} target="_blank" rel="noreferrer" className="footer-link">Topmate</a>
+              <a href={`https://${resumeData.contact.substack}.substack.com/`} target="_blank" rel="noreferrer" className="footer-link">Substack</a>
             </div>
           </div>
         </div>

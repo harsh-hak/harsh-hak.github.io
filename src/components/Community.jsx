@@ -1,5 +1,6 @@
 import React from 'react';
 import FadeInSection from './FadeInSection';
+import { resumeData } from '../data';
 
 const stats = [
     { value: '5K+', label: 'Active Members' },
@@ -47,6 +48,14 @@ const Community = () => {
                         className="community-join-btn"
                     >
                         ⚡ JOIN COMMUNITY
+                    </a>
+                    <a
+                        href={`https://${resumeData.contact.substack}.substack.com/`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="community-visit-btn"
+                    >
+                        READ NEWSLETTER →
                     </a>
                     <a
                         href="https://cybersphere-community.github.io/#/"

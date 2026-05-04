@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaLinkedin, FaGithub, FaEnvelope, FaVideo } from 'react-icons/fa';
+import { SiSubstack } from 'react-icons/si';
 import { resumeData } from '../data';
 import profileImg from '../assets/profile.jpg';
 import FadeInSection from './FadeInSection';
@@ -103,6 +104,10 @@ const Hero = () => {
                         <a href={`https://topmate.io/${resumeData.contact.topmate}`} target="_blank" rel="noopener noreferrer"
                             className="connect-icon" aria-label="Topmate 1:1 Call" onMouseMove={handleMagneticObj} onMouseLeave={resetMagneticObj}>
                             <FaVideo />
+                        </a>
+                        <a href={`https://${resumeData.contact.substack}.substack.com/`} target="_blank" rel="noopener noreferrer"
+                            className="connect-icon" aria-label="Substack Newsletter" onMouseMove={handleMagneticObj} onMouseLeave={resetMagneticObj}>
+                            <SiSubstack />
                         </a>
                     </div>
                 </div>

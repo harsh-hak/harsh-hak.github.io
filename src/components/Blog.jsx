@@ -86,9 +86,12 @@ const Blog = () => {
                     </div>
                 )}
 
-                <div className="view-all-container">
+                <div className="view-all-container" style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                     <a href="https://dev.to/harsh_hak" target="_blank" rel="noopener noreferrer" className="view-all-btn">
                         VIEW_ALL_ARTICLES_ON_DEV.TO &rarr;
+                    </a>
+                    <a href="https://harshkanojia.substack.com/" target="_blank" rel="noopener noreferrer" className="view-all-btn" style={{ background: 'var(--primary)', color: 'black' }}>
+                        SUBSCRIBE_TO_SUBSTACK &rarr;
                     </a>
                 </div>
             </FadeInSection>
