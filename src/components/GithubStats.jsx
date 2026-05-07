@@ -5,11 +5,10 @@ const GithubStats = () => {
     return (
         <section id="github-stats" className="container gh-stats-container">
             <h2 className="section-title" style={{ marginBottom: '3rem' }}>
-                <span style={{ color: 'var(--primary)' }}>&gt;</span> ACTIVITY_LOG
+                <span style={{ color: 'var(--primary)' }}>&gt;</span> GITHUB_COMMITS
             </h2>
 
             {/* GitHub Graph */}
-            <h3 className="gh-label commits">// GITHUB_COMMITS</h3>
             <div className="gh-chart-container">
                 <img
                     src={`https://ghchart.rshah.org/00ff41/${resumeData.contact.github}`}

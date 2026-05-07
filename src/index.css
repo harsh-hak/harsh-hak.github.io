@@ -1049,7 +1049,7 @@ img {
 .blog-image-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 50 / 21;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
 }
 
