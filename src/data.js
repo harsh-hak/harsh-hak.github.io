@@ -1,6 +1,6 @@
 export const resumeData = {
   name: "Harsh Kanojia",
-  role: "Cyber Security Researcher & Malware Analyst",
+  role: "AI & Cybersecurity Researcher",
   contact: {
     linkedin: "harsh-kanojia369",
     github: "harsh-hak",

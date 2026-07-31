@@ -69,12 +69,12 @@ export default function SEO({
                             "https://github.com/harsh-hak",
                             "https://topmate.io/harsh_kanojia"
                         ],
-                        "jobTitle": "Cyber Security Researcher",
+                        "jobTitle": "AI & Cybersecurity Researcher",
                         "worksFor": {
                             "@type": "Organization",
                             "name": "Self-Employed"
                         },
-                        "description": "Cyber Security Researcher and Malware Analyst specializing in threat detection, digital forensics, and secure development.",
+                        "description": "AI & Cybersecurity Researcher specializing in threat detection, digital forensics, and secure development.",
                         "knowsAbout": ["Cyber Security", "Malware Analysis", "Digital Forensics", "Network Security", "Penetration Testing"]
                     },
                     {
