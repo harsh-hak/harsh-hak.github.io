@@ -13,7 +13,8 @@ import { resumeData } from './data';
 
 // Lazy Load heavy components
 const Projects = React.lazy(() => import('./components/Projects'));
-const Publications = React.lazy(() => import('./components/Publications'));
+const ResearchPublications = React.lazy(() => import('./components/ResearchPublications'));
+const Certifications = React.lazy(() => import('./components/Certifications'));
 const GithubStats = React.lazy(() => import('./components/GithubStats'));
 const Community = React.lazy(() => import('./components/Community'));
 const Blog = React.lazy(() => import('./components/Blog'));
@@ -28,7 +29,6 @@ function App() {
       />
       {/* Background Effects */}
       <MatrixBackground />
-      <div className="scanlines"></div>
       <BackToTop />
 
       {/* Navigation */}
@@ -45,7 +45,8 @@ function App() {
         </React.Suspense>
         <React.Suspense fallback={<div className="terminal-loader">LOADING_DATA...</div>}>
           <Projects />
-          <Publications />
+          <ResearchPublications />
+          <Certifications />
           <GithubStats />
           <Blog />
         </React.Suspense>

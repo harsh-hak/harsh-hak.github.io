@@ -48,8 +48,10 @@ const MatrixBackground = () => {
 
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, glowR, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(0, 255, 65, ${alpha})`;
-                ctx.shadowColor = '#00ff41';
+                ctx.fillStyle = (i % 2 === 0)
+                    ? `rgba(204, 200, 185, ${alpha * 0.25})` // Creme particle
+                    : `rgba(245, 51, 44, ${alpha * 0.35})`; // Scarlet particle
+                ctx.shadowColor = '#F5332C';
                 ctx.shadowBlur = 0;
                 ctx.fill();
                 ctx.shadowBlur = 0;
@@ -64,14 +66,14 @@ const MatrixBackground = () => {
                     if (dist < CONNECTION_DIST) {
                         const lineAlpha = (1 - dist / CONNECTION_DIST) * 0.18;
 
-                        // Alternate some lines to a blue tint for depth
-                        const isBlue = (i + j) % 7 === 0;
+                        // Alternate some lines to a creme tint for depth
+                        const isCreme = (i + j) % 7 === 0;
                         ctx.beginPath();
                         ctx.moveTo(p.x, p.y);
                         ctx.lineTo(q.x, q.y);
-                        ctx.strokeStyle = isBlue
-                            ? `rgba(0, 184, 255, ${lineAlpha * 1.4})`
-                            : `rgba(0, 255, 65, ${lineAlpha})`;
+                        ctx.strokeStyle = isCreme
+                            ? `rgba(204, 200, 185, ${lineAlpha * 0.2})` // Creme, faint
+                            : `rgba(245, 51, 44, ${lineAlpha * 0.25})`;  // Scarlet red, faint
                         ctx.lineWidth = 0.6;
                         ctx.stroke();
                     }

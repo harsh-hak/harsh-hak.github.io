@@ -1,0 +1,202 @@
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - img [ref=e5]
+    - img [ref=e7]
+  - navigation [ref=e9]:
+    - generic [ref=e10]:
+      - generic [ref=e11]: Harsh Kanojia
+      - generic [ref=e12]:
+        - link "HOME" [ref=e13] [cursor=pointer]:
+          - /url: "#hero"
+        - link "ABOUT" [ref=e14] [cursor=pointer]:
+          - /url: "#about"
+        - link "SKILLS" [ref=e15] [cursor=pointer]:
+          - /url: "#skills"
+        - link "EXPERIENCE" [ref=e16] [cursor=pointer]:
+          - /url: "#experience"
+        - link "COMMUNITY" [ref=e17] [cursor=pointer]:
+          - /url: "#community"
+        - link "PROJECTS" [ref=e18] [cursor=pointer]:
+          - /url: "#projects"
+        - link "PUBLICATIONS" [ref=e19] [cursor=pointer]:
+          - /url: "#publications"
+        - link "BLOG" [ref=e20] [cursor=pointer]:
+          - /url: "#blog"
+  - main [ref=e21]:
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - img "Harsh Kanojia - Cyber Security Researcher and Malware Analyst" [ref=e25]
+        - generic [ref=e26]:
+          - heading "HI, I'M HARSH KANOJIA" [level=1] [ref=e27]
+          - paragraph [ref=e28]: "|"
+          - paragraph [ref=e29]: Deakin University, India
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - link "VIEW WORK" [ref=e32] [cursor=pointer]:
+            - /url: "#projects"
+          - link "BOOK A 1:1 CALL" [ref=e33] [cursor=pointer]:
+            - /url: https://topmate.io/harsh_cyber
+          - link "RESUME" [ref=e34] [cursor=pointer]:
+            - /url: https://drive.google.com/file/d/1M-ivTUB17fqjdoAgboUM-J2KkkUqAiF1/view?usp=sharing
+        - generic [ref=e35]:
+          - paragraph [ref=e36]: Connect With Me
+          - generic [ref=e37]:
+            - link "LinkedIn Profile" [ref=e38] [cursor=pointer]:
+              - /url: https://linkedin.com/in/harsh-kanojia369
+              - img [ref=e39]
+            - link "GitHub Profile" [ref=e41] [cursor=pointer]:
+              - /url: https://github.com/harsh-hak
+              - img [ref=e42]
+            - link "Send Email" [ref=e44] [cursor=pointer]:
+              - /url: mailto:harsh.cyber@outlook.com
+              - img [ref=e45]
+            - link "Topmate 1:1 Call" [ref=e47] [cursor=pointer]:
+              - /url: https://topmate.io/harsh_cyber
+              - img [ref=e48]
+            - link "Substack Newsletter" [ref=e50] [cursor=pointer]:
+              - /url: https://harshkanojia.substack.com/
+              - img [ref=e51]
+    - generic [ref=e54]:
+      - heading "// ABOUT ME" [level=2] [ref=e55]
+      - generic [ref=e56]:
+        - generic [ref=e57]:
+          - generic [ref=e59]: Professional Summary
+          - paragraph [ref=e61]: Cybersecurity professional with postgraduate specialization in malware analysis, vulnerability management, and digital forensics. Skilled in threat detection, incident response, and SOC operations using SIEM tools, threat intelligence, and the MITRE ATT&CK framework. Hands-on experience with Nmap, Nessus, Burp Suite, Wireshark, endpoint security, IDS/IPS, and Linux-based security workflows. Currently working on LLM Security and developing malware analysis tools.
+        - generic [ref=e62]:
+          - generic [ref=e64]: Education
+          - generic [ref=e66]:
+            - generic [ref=e67]:
+              - generic [ref=e68]: Master of Cyber Security
+              - generic [ref=e69]: Deakin University
+              - generic [ref=e70]: "2025 - Present | WAM: 75%"
+            - generic [ref=e71]:
+              - generic [ref=e72]: Bachelor in Computer Applications (Cyber Security)
+              - generic [ref=e73]: JIMS Engineering Management Technical Campus
+              - generic [ref=e74]: "2022 - 2025 | CGPA: 8.2"
+    - generic [ref=e75]:
+      - heading "> SKILLS_MATRIX" [level=2] [ref=e76]
+      - generic [ref=e78]:
+        - generic [ref=e79]: Malware Analysis
+        - generic [ref=e80]: Digital Forensics
+        - generic [ref=e81]: Threat Hunting
+        - generic [ref=e82]: Vulnerability Assessment
+        - generic [ref=e83]: Penetration Testing
+        - generic [ref=e84]: Incident Response
+        - generic [ref=e85]: SIEM/Log Analysis
+        - generic [ref=e86]: Python
+        - generic [ref=e87]: Bash
+        - generic [ref=e88]: Linux Administration
+        - generic [ref=e89]: Wireshark
+        - generic [ref=e90]: Nmap
+        - generic [ref=e91]: Nessus
+        - generic [ref=e92]: Burp Suite
+        - generic [ref=e93]: Metasploit
+        - generic [ref=e94]: Git
+        - generic [ref=e95]: YARA
+        - generic [ref=e96]: VirusTotal API
+        - generic [ref=e97]: AWS IAM
+        - generic [ref=e98]: Docker
+        - generic [ref=e99]: Privilege Escalation
+        - generic [ref=e100]: Red Teaming
+        - generic [ref=e101]: Malware Analysis
+        - generic [ref=e102]: Digital Forensics
+        - generic [ref=e103]: Threat Hunting
+        - generic [ref=e104]: Vulnerability Assessment
+        - generic [ref=e105]: Penetration Testing
+        - generic [ref=e106]: Incident Response
+        - generic [ref=e107]: SIEM/Log Analysis
+        - generic [ref=e108]: Python
+        - generic [ref=e109]: Bash
+        - generic [ref=e110]: Linux Administration
+        - generic [ref=e111]: Wireshark
+        - generic [ref=e112]: Nmap
+        - generic [ref=e113]: Nessus
+        - generic [ref=e114]: Burp Suite
+        - generic [ref=e115]: Metasploit
+        - generic [ref=e116]: Git
+        - generic [ref=e117]: YARA
+        - generic [ref=e118]: VirusTotal API
+        - generic [ref=e119]: AWS IAM
+        - generic [ref=e120]: Docker
+        - generic [ref=e121]: Privilege Escalation
+        - generic [ref=e122]: Red Teaming
+    - generic [ref=e124]:
+      - heading "// EXPERIENCE" [level=2] [ref=e125]
+      - generic [ref=e126]:
+        - generic [ref=e131]:
+          - generic [ref=e133]: Gopher Industry
+          - generic [ref=e134]:
+            - generic [ref=e135]:
+              - heading "Junior Cybersecurity Lead" [level=3] [ref=e136]
+              - generic [ref=e137]: Nov 2025 - Present
+            - paragraph [ref=e138]: Remote, Australia
+            - list [ref=e139]:
+              - listitem [ref=e140]: Led vulnerability identification in infrastructure and applications using Nmap, Nessus, and Burp Suite, reducing exploitable weaknesses by 25%.
+              - listitem [ref=e141]: Managed end-to-end incident response by validating SIEM alerts and mapping adversary behavior to MITRE ATT&CK framework.
+        - generic [ref=e145]:
+          - generic [ref=e147]: BCA Labs
+          - generic [ref=e148]:
+            - generic [ref=e149]:
+              - heading "Cyber Security Analyst" [level=3] [ref=e150]
+              - generic [ref=e151]: Jan 2025 - Present
+            - paragraph [ref=e152]: Delhi, India
+            - list [ref=e153]:
+              - listitem [ref=e154]: Performed web application penetration testing using Burp Suite and OWASP methodologies.
+              - listitem [ref=e155]: Identified high-risk vulnerabilities (SQLi, XSS, IDOR), reducing attack surface by 40%.
+              - listitem [ref=e156]: Discovered and verified multiple web security bugs across production environments.
+        - generic [ref=e160]:
+          - generic [ref=e162]: SecPy Community Pvt. Ltd.
+          - generic [ref=e163]:
+            - generic [ref=e164]:
+              - heading "Cybersecurity Content Researcher" [level=3] [ref=e165]
+              - generic [ref=e166]: Oct 2022 - Jan 2023
+            - paragraph [ref=e167]: Rajasthan, India
+            - list [ref=e168]:
+              - listitem [ref=e169]: Produced technical cybersecurity articles on malware analysis and network security, increasing engagement by 30%.
+              - listitem [ref=e170]: Translated complex security concepts into actionable learning resources.
+    - generic [ref=e171]: LOADING_DATA...
+    - generic [ref=e172]: LOADING_DATA...
+    - generic [ref=e174]:
+      - heading "> CONNECT WITH ME" [level=2] [ref=e175]
+      - paragraph [ref=e176]: Always open to discussing new opportunities and collaborations.
+      - generic [ref=e177]:
+        - link "EMAIL" [ref=e178] [cursor=pointer]:
+          - /url: mailto:harsh.cyber@outlook.com
+        - link "LINKEDIN" [ref=e179] [cursor=pointer]:
+          - /url: https://linkedin.com/in/harsh-kanojia369
+        - link "GITHUB" [ref=e180] [cursor=pointer]:
+          - /url: https://github.com/harsh-hak
+        - link "BOOK A 1:1 CALL" [ref=e181] [cursor=pointer]:
+          - /url: https://topmate.io/harsh_cyber
+  - contentinfo [ref=e182]:
+    - generic [ref=e183]:
+      - generic [ref=e184]:
+        - heading "Harsh Kanojia" [level=3] [ref=e185]
+        - paragraph [ref=e186]:
+          - text: Cyber Security Researcher & Malware Analyst.
+          - text: Securing the digital frontier, one exploit at a time.
+      - generic [ref=e187]:
+        - heading "Navigation" [level=3] [ref=e188]
+        - generic [ref=e189]:
+          - link "Home" [ref=e190] [cursor=pointer]:
+            - /url: "#hero"
+          - link "About" [ref=e191] [cursor=pointer]:
+            - /url: "#about"
+          - link "Projects" [ref=e192] [cursor=pointer]:
+            - /url: "#projects"
+          - link "Blog" [ref=e193] [cursor=pointer]:
+            - /url: "#blog"
+      - generic [ref=e194]:
+        - heading "Connect" [level=3] [ref=e195]
+        - generic [ref=e196]:
+          - link "LinkedIn" [ref=e197] [cursor=pointer]:
+            - /url: https://linkedin.com/in/harsh-kanojia369
+          - link "GitHub" [ref=e198] [cursor=pointer]:
+            - /url: https://github.com/harsh-hak
+          - link "Email" [ref=e199] [cursor=pointer]:
+            - /url: mailto:harsh.cyber@outlook.com
+          - link "Topmate" [ref=e200] [cursor=pointer]:
+            - /url: https://topmate.io/harsh_cyber
+          - link "Substack" [ref=e201] [cursor=pointer]:
+            - /url: https://harshkanojia.substack.com/
+    - paragraph [ref=e203]: © 2026 HARSH_KANOJIA. ALL RIGHTS RESERVED.

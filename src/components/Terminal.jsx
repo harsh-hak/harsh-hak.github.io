@@ -3,32 +3,39 @@ import React from 'react';
 const Terminal = ({ title = "Info", children, className = "" }) => {
     return (
         <div className={`terminal-window ${className}`} style={{
-            border: '1px solid rgba(255, 255, 255, 0.1)',
-            background: 'rgba(15, 15, 15, 0.7)', // Glassmorphism
-            backdropFilter: 'blur(10px)',
-            WebkitBackdropFilter: 'blur(10px)',
-            color: '#f0f0f0', // High contrast text
-            boxShadow: '0 0 40px rgba(0, 255, 65, 0.05)',
+            border: '2px solid var(--secondary)',
+            background: 'var(--surface)',
+            color: 'var(--text)',
+            boxShadow: '4px 4px 0px var(--secondary)',
             marginBottom: '2rem',
-            borderRadius: '15px',
+            borderRadius: '0px',
             overflow: 'hidden',
             maxWidth: '100%',
-            transition: 'all 0.3s ease'
+            transition: 'all 0.15s ease',
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'column'
         }}>
             <div className="terminal-header" style={{
-                background: 'var(--primary-dim)',
-                color: 'black',
-                padding: '8px 15px',
+                background: '#000000', // Stark brutalist black header
+                color: '#ffffff', // High contrast white text
+                padding: '10px 15px',
                 fontFamily: 'var(--font-main)',
                 fontWeight: 'bold',
                 display: 'flex',
                 justifyContent: 'space-between',
                 alignItems: 'center',
-                userSelect: 'none'
+                userSelect: 'none',
+                borderBottom: '2px solid var(--secondary)'
             }}>
-                <span style={{ fontSize: '0.9rem' }}>{title}</span>
+                <span style={{ fontSize: '0.9rem', letterSpacing: '0.5px' }}>{title}</span>
             </div>
-            <div className="terminal-body" style={{ padding: '20px' }}>
+            <div className="terminal-body" style={{ 
+                padding: '30px 20px 20px 20px', // Extra top padding to improve heading rhythm
+                flex: 1,
+                display: 'flex',
+                flexDirection: 'column'
+            }}>
                 {children}
             </div>
         </div>

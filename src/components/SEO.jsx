@@ -24,7 +24,7 @@ export default function SEO({
             <meta name="keywords" content={keywords} />
             <meta name="author" content={name} />
             <link rel="canonical" href={siteUrl} />
-            <meta name="theme-color" content="#00ff41" />
+            <meta name="theme-color" content="#000000" />
 
             <meta name="google-site-verification" content="jzZW44CssBpEsDBuen0z8E4MyGG9ay_YV_rjHrS4lnI" />
 

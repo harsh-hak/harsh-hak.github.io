@@ -10,8 +10,7 @@ const Skills = () => {
 
             <div className="skills-wrapper">
                 <div className="skills-track">
-                    {/* Double the list for infinite scroll effect */}
-                    {[...resumeData.skills, ...resumeData.skills].map((skill, idx) => (
+                    {resumeData.skills.map((skill, idx) => (
                         <div key={idx} className="skill-badge">
                             {skill}
                         </div>
