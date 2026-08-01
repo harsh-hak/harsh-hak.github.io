@@ -19,16 +19,27 @@ const ResearchPublications = () => {
                                     {item.title}
                                 </h3>
                                 
-                                {item.type === 'POSTER_PRESENTATION' ? (
+                                {item.type === 'PAPER' && item.conference && (
                                     <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.85rem', lineHeight: '1.5', margin: '15px 0', color: 'var(--text-secondary)' }}>
                                         <div style={{ marginBottom: '8px', color: 'var(--text)' }}>
-                                            <span style={{ color: 'var(--primary)' }}>[!]</span> Presenter at Army Institute of Management & Technology (AIMT), Greater Noida
+                                            <span style={{ color: 'var(--primary)' }}>[!]</span> Poster Presenter — INDIACom {item.year}
                                         </div>
                                         <div>
                                             <span style={{ color: 'var(--primary)' }}>[~]</span> Conference: {item.conference}
                                         </div>
                                     </div>
-                                ) : null}
+                                )}
+
+                                {item.type === 'POSTER_PRESENTATION' && (
+                                    <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.85rem', lineHeight: '1.5', margin: '15px 0', color: 'var(--text-secondary)' }}>
+                                        <div style={{ marginBottom: '8px', color: 'var(--text)' }}>
+                                            <span style={{ color: 'var(--primary)' }}>[!]</span> Presenter at Army Institute of Management &amp; Technology (AIMT), Greater Noida
+                                        </div>
+                                        <div>
+                                            <span style={{ color: 'var(--primary)' }}>[~]</span> Conference: {item.conference}
+                                        </div>
+                                    </div>
+                                )}
 
                                 <div className="pub-meta">
                                     <span className="pub-year">

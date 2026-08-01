@@ -10,7 +10,7 @@ export const resumeData = {
     topmate: "harsh_cyber",
     substack: "harshkanojia"
   },
-  summary: "Cybersecurity professional with postgraduate specialization in malware analysis, vulnerability management, and digital forensics. Skilled in threat detection, incident response, and SOC operations using SIEM tools, threat intelligence, and the MITRE ATT&CK framework. Hands-on experience with Nmap, Nessus, Burp Suite, Wireshark, endpoint security, IDS/IPS, and Linux-based security workflows. Currently working on LLM Security and developing malware analysis tools.",
+  summary: "Results-driven Cyber Security Researcher and AI Security Enthusiast with hands-on experience in penetration testing, security automation, and AI-driven cybersecurity solutions. Experienced in developing and evaluating Large Language Models (LLMs) and Small Language Models (SLMs) for cybersecurity applications, including intelligent security automation and AI-assisted threat analysis. Skilled in vulnerability assessment, SOC operations, secure system design, and Python development, with a strong passion for offensive security, cybersecurity research, and building practical AI-powered defense solutions.",
   experience: [
     {
       role: "Junior Cybersecurity Lead",
@@ -33,16 +33,7 @@ export const resumeData = {
         "Discovered and verified multiple web security bugs across production environments."
       ]
     },
-    {
-      role: "Cybersecurity Content Researcher",
-      company: "SecPy Community Pvt. Ltd.",
-      location: "Rajasthan, India",
-      duration: "Oct 2022 - Jan 2023",
-      description: [
-        "Produced technical cybersecurity articles on malware analysis and network security, increasing engagement by 30%.",
-        "Translated complex security concepts into actionable learning resources."
-      ]
-    }
+
   ],
   projects: [
     {
@@ -90,7 +81,7 @@ export const resumeData = {
     {
       degree: "Master of Cyber Security",
       institution: "Deakin University",
-      notes: "WAM: 75%",
+      notes: "WAM: 80%",
       year: "2025 - Present"
     },
     {
@@ -121,10 +112,22 @@ export const resumeData = {
       title: "CompTIA Security+ (SY0-701)",
       issuer: "CompTIA",
       date: "June 2026",
-      expiry: "June 2029",
+      score: "834/900",
       candidateId: "COMP001023077268",
       code: "8113fb46c5f447cf94308689eeac98a7",
       verifyLink: "http://verify.CompTIA.org"
+    },
+    {
+      title: "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate",
+      issuer: "Oracle",
+      date: "2026",
+      verifyLink: "https://catalog-education.oracle.com/"
+    },
+    {
+      title: "AWS Certifications",
+      issuer: "Amazon Web Services (AWS)",
+      date: "2026",
+      verifyLink: "https://aws.amazon.com/verification"
     }
   ],
   researchAndPublications: [
@@ -132,6 +135,7 @@ export const resumeData = {
       type: "PAPER",
       title: "A Python-Based Network Vulnerability Scanner Tool for Enhanced Cybersecurity",
       publisher: "IEEE",
+      conference: "International Conference on Computing for Sustainable Global Development (INDIACom)",
       link: "https://ieeexplore.ieee.org/abstract/document/11115758",
       year: "2025"
     },
