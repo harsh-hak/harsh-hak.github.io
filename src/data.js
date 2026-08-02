@@ -37,7 +37,7 @@ export const resumeData = {
   ],
   projects: [
     {
-      title: "DPA Sentinel AI",
+      title: "Sentry-AI",
       tech: "Wazuh SIEM, Ollama (Llama 3/Qwen), ChromaDB (RAG), Python",
       description: "An intelligent, offline cybersecurity copilot that integrates seamlessly with Wazuh SIEM. It ingests, normalizes, and analyzes security telemetry using local LLMs to eliminate alert fatigue, map threats to the MITRE ATT&CK framework, calculate dynamic risk scores, correlate temporal alerts, and generate reports.",
       features: [
@@ -50,7 +50,8 @@ export const resumeData = {
         "Gateway Settings Cockpit: A real-time configuration manager to adjust, validate, and save API connections to Wazuh Managers, local Ollama hosts/models, and daemon simulators.",
         "Executive Reporting: Downloadable compliance and incident report summaries generated dynamically in PDF and DOCX formats."
       ],
-      link: "https://github.com/harsh-hak/DPA-SOC-AI-Platform"
+      link: "https://github.com/harsh-hak/DPA-SOC-AI-Platform",
+      demoLink: "https://harsh-hak.github.io/Sentry-AI/landing-page/"
     },
     {
       title: "ShadowScan",
