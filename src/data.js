@@ -6,7 +6,7 @@ export const resumeData = {
     github: "harsh-hak",
     email: "harsh.cyber@outlook.com",
     phone: "+91 8700158124",
-    cv: "https://drive.google.com/file/d/1c5tuwwkcPsNyz0eEEKCYr835-tTGydc2/view?usp=sharing",
+    cv: "https://drive.google.com/file/d/1Sgrp6MHWMqn5K0o1N8HaupdVgUB5YcrH/view?usp=sharing",
     topmate: "harsh_cyber",
     substack: "harshkanojia"
   },
