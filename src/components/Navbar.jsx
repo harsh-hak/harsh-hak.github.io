@@ -10,9 +10,9 @@ const Navbar = () => {
         { label: 'EXPERIENCE', href: '#experience' },
         { label: 'COMMUNITY', href: '#community' },
         { label: 'PROJECTS', href: '#projects' },
-        { label: 'PUBLICATIONS', href: '#publications' },
-        { label: 'BLOG', href: '#blog' },
-        // { label: 'CONTACT', href: '#contact' }
+        { label: 'RESEARCH & PUB', href: '#research' },
+        { label: 'CERTIFICATIONS', href: '#certifications' },
+        { label: 'BLOG', href: '#blog' }
     ];
 
     const handleNavClick = (e, href) => {

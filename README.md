@@ -1,6 +1,6 @@
 # 🛡️ Cyber Security Portfolio - Harsh Kanojia
 
-> A high-tech, terminal-themed portfolio website showcasing cybersecurity expertise, malware analysis tools, and red teaming adventures.
+> A premium Minimal Neo-Brutalist themed portfolio website showcasing cybersecurity expertise, malware analysis tools, and security credentials.
 
 ![Portfolio Preview](./public/vite.svg)
 
@@ -9,17 +9,17 @@
 
 ## 💻 Tech Stack
 - **Framework**: React + Vite
-- **Styling**: Cyberpunk / Hacker Theme (CSS3)
-- **Animation**: Matrix Rain, Glitch Effects, Typing Terminal
+- **Styling**: Minimal Neo-Brutalist Theme (Scarlet Red, Pure Black & Creme)
+- **Visuals**: Clean Matrix Particle Canvas, Outlined Terminal Widgets
 - **Deployment**: GitHub Pages
 
 ## 📂 Features
-- **Interactive Terminal**: Typewriter effects and CLI-style layout.
-- **Project Directory**: Showcase of tools and scripts.
-- **Activity Log**: Live GitHub contributions & TryHackMe rank.
-- **Research Log**: Published papers and articles.
-- **Community Uplink**: WhatsApp community invitation.
-- **Secure Comms**: Encrypted contact methods.
+- **Interactive Outlined Terminal**: High-contrast, clean Neo-Brutalist CLI-style layout widgets.
+- **Project Directory**: Showcase of custom tools and security scripts.
+- **Certifications Log**: Verified credentials such as CompTIA Security+ (SY0-701) with logo integration.
+- **Research & Publications**: Published IEEE papers and AIMT research poster presentations.
+- **Activity Log**: Live GitHub contributions & TryHackMe rank telemetry.
+- **Community Uplink**: WhatsApp community invitation card.
 
 ## 🛠️ Installation
 1. Clone the repo:

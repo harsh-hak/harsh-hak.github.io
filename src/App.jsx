@@ -13,7 +13,8 @@ import { resumeData } from './data';
 
 // Lazy Load heavy components
 const Projects = React.lazy(() => import('./components/Projects'));
-const Publications = React.lazy(() => import('./components/Publications'));
+const ResearchPublications = React.lazy(() => import('./components/ResearchPublications'));
+const Certifications = React.lazy(() => import('./components/Certifications'));
 const GithubStats = React.lazy(() => import('./components/GithubStats'));
 const Community = React.lazy(() => import('./components/Community'));
 const Blog = React.lazy(() => import('./components/Blog'));
@@ -22,13 +23,12 @@ function App() {
   return (
     <>
       <SEO
-        title="Harsh Kanojia - Cyber Security Researcher & Malware Analyst"
-        description="Harsh Kanojia is a Cyber Security Researcher and Malware Analyst specializing in threat detection, digital forensics, and secure development. Explore my portfolio to see my security research and tools."
+        title="Harsh Kanojia - AI & Cybersecurity Researcher"
+        description="Harsh Kanojia is an AI & Cybersecurity Researcher specializing in threat detection, digital forensics, and secure development. Explore my portfolio to see my security research and tools."
         keywords="Harsh Kanojia, Cyber Security Researcher, Malware Analyst, Information Security, Penetration Testing, Digital Forensics, Python, Network Security"
       />
       {/* Background Effects */}
       <MatrixBackground />
-      <div className="scanlines"></div>
       <BackToTop />
 
       {/* Navigation */}
@@ -45,7 +45,8 @@ function App() {
         </React.Suspense>
         <React.Suspense fallback={<div className="terminal-loader">LOADING_DATA...</div>}>
           <Projects />
-          <Publications />
+          <ResearchPublications />
+          <Certifications />
           <GithubStats />
           <Blog />
         </React.Suspense>
@@ -61,7 +62,7 @@ function App() {
           <div className="footer-col">
             <h3>Harsh Kanojia</h3>
             <p style={{ color: '#888', lineHeight: '1.6' }}>
-              Cyber Security Researcher & Malware Analyst.<br />
+              AI & Cybersecurity Researcher.<br />
               Securing the digital frontier, one exploit at a time.
             </p>
           </div>

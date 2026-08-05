@@ -24,7 +24,7 @@ export default function SEO({
             <meta name="keywords" content={keywords} />
             <meta name="author" content={name} />
             <link rel="canonical" href={siteUrl} />
-            <meta name="theme-color" content="#00ff41" />
+            <meta name="theme-color" content="#000000" />
 
             <meta name="google-site-verification" content="jzZW44CssBpEsDBuen0z8E4MyGG9ay_YV_rjHrS4lnI" />
 
@@ -69,12 +69,12 @@ export default function SEO({
                             "https://github.com/harsh-hak",
                             "https://topmate.io/harsh_kanojia"
                         ],
-                        "jobTitle": "Cyber Security Researcher",
+                        "jobTitle": "AI & Cybersecurity Researcher",
                         "worksFor": {
                             "@type": "Organization",
                             "name": "Self-Employed"
                         },
-                        "description": "Cyber Security Researcher and Malware Analyst specializing in threat detection, digital forensics, and secure development.",
+                        "description": "AI & Cybersecurity Researcher specializing in threat detection, digital forensics, and secure development.",
                         "knowsAbout": ["Cyber Security", "Malware Analysis", "Digital Forensics", "Network Security", "Penetration Testing"]
                     },
                     {

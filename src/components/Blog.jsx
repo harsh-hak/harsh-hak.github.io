@@ -9,7 +9,7 @@ const Blog = () => {
     const [loading, setLoading] = useState(true);
 
     const getOptimizedImageUrl = (url) => {
-        if (!url) return 'https://via.placeholder.com/640x360/000000/00ff41?text=NO_IMAGE_FOUND';
+        if (!url) return 'https://via.placeholder.com/640x360/000000/f5332c?text=NO_IMAGE_FOUND';
         // Optimize sizes to reduce file sizes
         return url.replace('width=1000', 'width=600');
     };

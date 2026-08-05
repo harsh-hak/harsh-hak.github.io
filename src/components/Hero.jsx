@@ -7,19 +7,6 @@ import FadeInSection from './FadeInSection';
 import VisitorCounter from './VisitorCounter';
 
 const Hero = () => {
-    const [text, setText] = useState('');
-    const fullText = resumeData.role;
-
-    useEffect(() => {
-        let index = 0;
-        const interval = setInterval(() => {
-            setText(fullText.slice(0, index));
-            index++;
-            if (index > fullText.length) clearInterval(interval);
-        }, 50);
-        return () => clearInterval(interval);
-    }, [fullText]);
-
     const handleMagneticObj = (e) => {
         if (window.matchMedia("(pointer: coarse)").matches) return; // Disable on mobile
         const btn = e.currentTarget;
@@ -45,7 +32,7 @@ const Hero = () => {
                         width="220"
                         height="220"
                         loading="eager"
-                        fetchpriority="high"
+                        fetchPriority="high"
                     />
                 </div>
 
@@ -54,7 +41,7 @@ const Hero = () => {
                         HI, I'M {resumeData.name.toUpperCase()}
                     </h1>
                     <p className="hero-desc">
-                        {text}<span className="cursor-blink">|</span>
+                        {resumeData.role}
                     </p>
                     <p className="hero-uni">
                         <span className="uni-highlight">
@@ -63,11 +50,6 @@ const Hero = () => {
                     </p>
                 </div>
             </FadeInSection>
-
-            <style>{`
-                .cursor-blink { animation: blink 1s step-end infinite; }
-                @keyframes blink { 50% { opacity: 0; } }
-            `}</style>
 
             <FadeInSection delay="800ms">
                 <div className="hero-actions">
