@@ -119,16 +119,17 @@ export const resumeData = {
       verifyLink: "http://verify.CompTIA.org"
     },
     {
+      title: "AWS Certified Solutions Architect - Associate",
+      issuer: "Amazon Web Services (AWS)",
+      date: "August 2026",
+      code: "27abd2b51230474990a62fd13c7fa800",
+      verifyLink: "https://aws.amazon.com/verification"
+    },
+    {
       title: "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate",
       issuer: "Oracle",
       date: "2026",
       verifyLink: "https://catalog-education.oracle.com/"
-    },
-    {
-      title: "AWS Certifications",
-      issuer: "Amazon Web Services (AWS)",
-      date: "2026",
-      verifyLink: "https://aws.amazon.com/verification"
     }
   ],
   researchAndPublications: [
