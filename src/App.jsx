@@ -9,6 +9,7 @@ import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
 import VisitorCounter from './components/VisitorCounter';
+import ErrorBoundary from './components/ErrorBoundary';
 import { resumeData } from './data';
 
 // Lazy Load heavy components
@@ -40,16 +41,20 @@ function App() {
         <About />
         <Skills />
         <Experience />
-        <React.Suspense fallback={<div className="terminal-loader">LOADING_DATA...</div>}>
-          <Community />
-        </React.Suspense>
-        <React.Suspense fallback={<div className="terminal-loader">LOADING_DATA...</div>}>
-          <Projects />
-          <ResearchPublications />
-          <Certifications />
-          <GithubStats />
-          <Blog />
-        </React.Suspense>
+        <ErrorBoundary>
+          <React.Suspense fallback={<div className="terminal-loader">LOADING_DATA...</div>}>
+            <Community />
+          </React.Suspense>
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <React.Suspense fallback={<div className="terminal-loader">LOADING_DATA...</div>}>
+            <Projects />
+            <ResearchPublications />
+            <Certifications />
+            <GithubStats />
+            <Blog />
+          </React.Suspense>
+        </ErrorBoundary>
         <Contact />
       </main>
 
@@ -95,7 +100,9 @@ function App() {
           <p className="footer-text">
             © {new Date().getFullYear()} HARSH_KANOJIA. ALL RIGHTS RESERVED.
           </p>
-          <VisitorCounter />
+          <ErrorBoundary>
+            <VisitorCounter />
+          </ErrorBoundary>
         </div>
       </footer>
     </>
