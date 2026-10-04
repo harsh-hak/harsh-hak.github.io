@@ -54,7 +54,11 @@ desktop.ini
 *.sw?
 
 # AI IDEs & Agent Tooling
-.playwright-mcp/
+.agent/
+.claude/
+.codex/
+.cursor/
 .kilo/
 .gemini/
+.playwright-mcp/
 *.local.json
