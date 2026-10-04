@@ -39,14 +39,18 @@ const Blog = () => {
         if (cleanDesc.length > 150) cleanDesc = cleanDesc.substring(0, 147) + '...';
 
         const pubDate = new Date(post.pubDate);
+        const isValidDate = !isNaN(pubDate.getTime());
         const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        const formattedDate = isValidDate 
+            ? `${months[pubDate.getMonth()]} ${pubDate.getDate()}, ${pubDate.getFullYear()}`
+            : 'Recent';
         
         return {
             id: `substack-${post.guid || post.link}`,
             title: post.title,
             image: post.thumbnail,
-            publishedAt: pubDate.getTime(),
-            formattedDate: `${months[pubDate.getMonth()]} ${pubDate.getDate()}, ${pubDate.getFullYear()}`,
+            publishedAt: isValidDate ? pubDate.getTime() : Date.now(),
+            formattedDate: formattedDate,
             readingTime: `${readTime} min read`,
             description: cleanDesc,
             tags: post.categories && post.categories.length > 0 ? post.categories : ['newsletter'],
