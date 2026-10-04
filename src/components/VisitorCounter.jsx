@@ -17,10 +17,17 @@ const VisitorCounter = () => {
                 : 'https://api.counterapi.dev/v1/harsh-hak.github.io/visits';
 
             fetch(endpoint)
-                .then(res => res.json())
+                .then(res => {
+                    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                    return res.json();
+                })
                 .then(data => {
-                    setCount(data.count);
-                    if (increment) sessionStorage.setItem('visit_counted', 'true');
+                    if (typeof data?.count === 'number') {
+                        setCount(data.count);
+                        if (increment) sessionStorage.setItem('visit_counted', 'true');
+                    } else {
+                        setCount(null);
+                    }
                 })
                 .catch(() => setCount(null));
         };
@@ -34,7 +41,7 @@ const VisitorCounter = () => {
         }
     }, []);
 
-    if (count === null) return null;
+    if (typeof count !== 'number') return null;
 
     return (
         <div className="visitor-counter">
