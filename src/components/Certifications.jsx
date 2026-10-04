@@ -4,7 +4,7 @@ import Terminal from './Terminal';
 import FadeInSection from './FadeInSection';
 import securityPlusBadge from '../assets/security-plus-badge.png';
 import oracleBadge from '../assets/oracle-ai-badge.png';
-import awsBadge from '../assets/aws-badge.png';
+import awsBadge from '../assets/aws-solutions-architect-associate-badge.png';
 
 const badgeMap = {
     'CompTIA': securityPlusBadge,
