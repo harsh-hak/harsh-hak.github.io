@@ -13,6 +13,18 @@ export const resumeData = {
   summary: "Results-driven Cyber Security Researcher and AI Security Enthusiast with hands-on experience in penetration testing, security automation, and AI-driven cybersecurity solutions. Experienced in developing and evaluating Large Language Models (LLMs) and Small Language Models (SLMs) for cybersecurity applications, including intelligent security automation and AI-assisted threat analysis. Skilled in vulnerability assessment, SOC operations, secure system design, and Python development, with a strong passion for offensive security, cybersecurity research, and building practical AI-powered defense solutions.",
   experience: [
     {
+      role: "Research Assistant",
+      company: "Deakin University, GIFT Campus",
+      location: "GIFT City, Gandhinagar, India",
+      duration: "Oct 2026 - Present",
+      mentor: "Professor Hridoy Sankar Dutta",
+      mentorLink: "https://hridaydutta123.github.io/",
+      description: [
+        "Working as a Research Assistant under the mentorship of [Professor Hridoy Sankar Dutta](https://hridaydutta123.github.io/).",
+        "Conducting research on Small Language Model (SLM) security and AI security, analyzing vulnerabilities and developing defense mechanisms."
+      ]
+    },
+    {
       role: "Junior Cybersecurity Lead",
       company: "Gopher Industry",
       location: "Remote, Australia",
